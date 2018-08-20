@@ -1,0 +1,2 @@
+# java-thoughts
+Java Hodgepodge
