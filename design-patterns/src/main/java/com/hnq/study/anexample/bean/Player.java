@@ -50,11 +50,11 @@ public class Player {
     public void buy(Double amount) {
         this.amount = amount;
         totalAmount += amount;
-        if (totalAmount > GOLD_VIP) {
+        if (totalAmount >= GOLD_VIP) {
             calPrice = new GoldVip();
-        } else if (totalAmount > SUPER_VIP) {
+        } else if (totalAmount >= SUPER_VIP) {
             calPrice = new SuperVip();
-        } else if (totalAmount > VIP) {
+        } else if (totalAmount >= VIP) {
             calPrice = new Vip();
         }
     }
