@@ -36,4 +36,8 @@ public class TransactionInput {
         return utxo;
     }
 
+    public void setUtxo(TransactionOutput utxo) {
+        this.utxo = utxo;
+    }
+
 }

@@ -2,7 +2,9 @@ package com.hnq.study.blockchain;
 
 import java.security.*;
 import java.security.spec.ECGenParameterSpec;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @author henengqiang
@@ -46,8 +48,52 @@ public class Wallet {
 
     public float getBalance() {
         float total = 0;
-//        NoobChain
-        return 0L;
+        NoobChain noobChain = new NoobChain();
+        for (Map.Entry<String, TransactionOutput> item : noobChain.getUtxos().entrySet()) {
+            TransactionOutput UTXO = item.getValue();
+            // If output belongs to me (if coins belong to me)
+            if (UTXO.isMine(publicKey)) {
+                // Add it to our list of unspent transaction
+                utxos.put(UTXO.getId(), UTXO);
+                total += UTXO.getValue();
+            }
+        }
+        return total;
+    }
+    
+    public Transaction sendFunds(PublicKey recipient, float value) {
+        if (getBalance() < value) {
+            System.out.println("#Not Enough funds to send transaction. Transaction Discarded.");
+            return null;
+        }
+        ArrayList<TransactionInput> inputs = new ArrayList<>();
+        float total = 0;
+        for (Map.Entry<String, TransactionOutput> item : utxos.entrySet()) {
+            TransactionOutput UTXO = item.getValue();
+            total += UTXO.getValue();
+            inputs.add(new TransactionInput(UTXO.getId()));
+            if (total > value) {
+                break;
+            }
+        }
+        Transaction newTransaction = new Transaction(publicKey, recipient, value, inputs);
+        newTransaction.generateSignature(privateKey);
+        for (TransactionInput input : inputs) {
+            utxos.remove(input.getTransactionOutputId());
+        }
+        return newTransaction;
+    }
+
+    public PrivateKey getPrivateKey() {
+        return privateKey;
+    }
+
+    public PublicKey getPublicKey() {
+        return publicKey;
+    }
+
+    public HashMap<String, TransactionOutput> getUtxos() {
+        return utxos;
     }
 
 }
