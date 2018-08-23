@@ -3,7 +3,7 @@
 
 ## -- contents --
  
-### design-patterns
+### design-patterns module
  * &nbsp;&nbsp; When writing code, there will always be a lot of if...else, or case. If you include more than 
  one conditional statement in a conditional statement, the code will become bloated, the cost of maintenance will increase, 
  and the strategy mode will solve this problem better.  
@@ -14,15 +14,19 @@
  policy interface, and in order to achieve the purpose of the last sentence That is, letting the algorithm 
  change independently of the client that uses it, we need to make the client depend on the policy interface.
  * &nbsp;&nbsp; The usage situation of the strategy mode:  
- &nbsp;&nbsp; 1. A variety of treatments for the same type of problem, only when there are differences in specific behaviors;  
- &nbsp;&nbsp; 2. Need to safely package multiple operations of the same type;  
- &nbsp;&nbsp; 3. When the same abstract class has multiple subclasses, you need to use if-else or switch-case 
+   * &nbsp;&nbsp; 1. A variety of treatments for the same type of problem, only when there are differences in specific behaviors;  
+   * &nbsp;&nbsp; 2. Need to safely package multiple operations of the same type;  
+   * &nbsp;&nbsp; 3. When the same abstract class has multiple subclasses, you need to use if-else or switch-case 
  to select a specific subclass.  
  * &nbsp;&nbsp; UML Class picture:  
- ![Image text](images/UMLclass.png)  
+ ![Image text](images/UMLClass.png)  
  * &nbsp;&nbsp; This pattern involves three roles:  
  &nbsp;&nbsp; Context role: Hold a reference to a Strategy.  
  &nbsp;&nbsp; Abstract strategy: This is an abstract role, usually implemented by an interface or abstract class. 
  This role gives the interfaces required for all specific policy classes.  
  &nbsp;&nbsp; ConcreteStrategy role: Wraps related algorithms or behaviors.  
  
+### popular-tech module
+ * Contains the latest, latest and hottest technologies
+   * blockchain   
+   See [blockchain](https://baike.baidu.com/item/区块链/13465666?fr=aladdin)
