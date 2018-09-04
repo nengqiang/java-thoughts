@@ -3,6 +3,12 @@
 
 ## -- contents --
  
+### popular-tech module
+ * Contains the latest, latest and hottest technologies
+   * blockchain   
+   See [blockchain](https://baike.baidu.com/item/区块链/13465666?fr=aladdin)
+   * java date new api: The new date api of JDK8
+ 
 ### design-patterns module
  * When writing code, there will always be a lot of if...else, or case. If you include more than 
  one conditional statement in a conditional statement, the code will become bloated, the cost of maintenance will increase, 
@@ -67,11 +73,65 @@
  which will increase the complexity of the system.  
  （注意事项：作为一种创建类模式，在任何需要生成复杂对象的地方，都可以使用工厂方法模式。有一点需要注意的地方就是复杂对象适合使用工厂模式，
  而简单对象，特别是只需要通过 new 就可以完成创建的对象，无需使用工厂模式。如果使用工厂模式，就需要引入一个工厂类，会增加系统的复杂度。）    
-  * UML Class picture:  
-  ![Image text](images/factoryMode.png)  
- 
-### popular-tech module
- * Contains the latest, latest and hottest technologies
-   * blockchain   
-   See [blockchain](https://baike.baidu.com/item/区块链/13465666?fr=aladdin)
-   * java date new api: The new date api of JDK8
+ * UML Class picture:  
+ ![Image text](images/factoryMode.png)   
+  
+ ---
+  
+ **Abstract Factory Pattern(抽象工厂模式)**
+ * The Abstract Factory Pattern creates other factories around a super factory. This super factory is also known as the 
+ factory of other factories. This type of design pattern is a creative model that provides the best way to create objects.  
+ In abstract factory mode, an interface is a factory that is responsible for creating a related object, without explicitly 
+ specifying their class. Each generated factory can provide objects in factory mode.   
+ （抽象工厂模式（Abstract Factory Pattern）是围绕一个超级工厂创建其他工厂。该超级工厂又称为其他工厂的工厂。这种类型的设计模式属于创建型模式，
+ 它提供了一种创建对象的最佳方式。在抽象工厂模式中，接口是负责创建一个相关对象的工厂，不需要显式指定它们的类。每个生成的工厂都能按照工厂模式提供对象。）  
+ * Intent: Provides an interface to create a series of related or interdependent objects without specifying their specific classes.  
+ （意图：提供一个创建一系列相关或相互依赖对象的接口，而无需指定它们具体的类。）  
+ * The main solution: mainly solve the problem of interface selection.  
+ （主要解决：主要解决接口选择的问题。）
+ * When to use: The system's products have more than one product family, and the system consumes only one of the products.  
+ （何时使用：系统的产品有多于一个的产品族，而系统只消费其中某一族的产品。）
+ * How to solve: Define multiple products in one product family.  
+ （如何解决：在一个产品族里面，定义多个产品。）
+ * Key code: Aggregate multiple products in one factory.  
+ （关键代码：在一个工厂里聚合多个同类产品。）
+ * Application example: Work, in order to participate in some gatherings, there must be two or more sets of clothes, 
+ such as business wear (set, a series of specific products), fashion (set, a series of specific products), even for a 
+ family In terms of business women's wear, business men's wear, fashion women's wear, fashion men's wear, these are also 
+ complete sets, that is, a series of specific products. Suppose a situation (in reality, it doesn't exist, otherwise it 
+ can't enter communism, but it helps to illustrate the abstract factory model). In your home, a certain wardrobe 
+ (specific factory) can only store one kind of this. The clothes (set, a series of specific products), naturally take 
+ out this set of clothes every time from the wardrobe. Understand the idea of ​​OO, all the wardrobes (specific factories) 
+ are one of the wardrobe type (abstract factory), and each set of clothes includes a specific top (a specific product), 
+ pants (a specific Products), these specific tops are actually tops (abstract products), and the specific pants are also 
+ pants (another abstract product).  
+ （应用实例：工作了，为了参加一些聚会，肯定有两套或多套衣服吧，比如说有商务装（成套，一系列具体产品）、时尚装（成套，一系列具体产品），
+ 甚至对于一个家庭来说，可能有商务女装、商务男装、时尚女装、时尚男装，这些也都是成套的，即一系列具体产品。假设一种情况（现实中是不存在的，
+ 要不然，没法进入共产主义了，但有利于说明抽象工厂模式），在您的家中，某一个衣柜（具体工厂）只能存放某一种这样的衣服（成套，一系列具体产品），
+ 每次拿这种成套的衣服时也自然要从这个衣柜中取出了。用 OO 的思想去理解，所有的衣柜（具体工厂）都是衣柜类的（抽象工厂）某一个，而每一件成套
+ 的衣服又包括具体的上衣（某一具体产品），裤子（某一具体产品），这些具体的上衣其实也都是上衣（抽象产品），具体的裤子也都是裤子（另一个抽象产品）。）
+ * Advantage: When multiple objects in a product family are designed to work together, it ensures that the client 
+ always uses only objects from the same product family.  
+ （优点：当一个产品族中的多个对象被设计成一起工作时，它能保证客户端始终只使用同一个产品族中的对象。）
+ * Disadvantages: Product family extension is very difficult. To add a product in a series, you need to add code in the 
+ abstract Creator and add code in the specific one.  
+ （缺点：产品族扩展非常困难，要增加一个系列的某一产品，既要在抽象的 Creator 里加代码，又要在具体的里面加代码。）
+ * Usage scenarios: 1, QQ for skin, a whole set together. 2. Generate programs for different operating systems.  
+ （使用场景： 1、QQ 换皮肤，一整套一起换。 2、生成不同操作系统的程序。）
+ * Note: The product family is difficult to expand, and the product level is easy to expand.  
+ （注意事项：产品族难扩展，产品等级易扩展。）
+ * UML Class picture:  
+ ![Image text](images/abstractFactoryMode.jpg)
+
+
+
+
+
+
+
+
+
+
+
+
+
