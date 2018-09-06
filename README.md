@@ -122,6 +122,58 @@
  （注意事项：产品族难扩展，产品等级易扩展。）
  * UML Class picture:  
  ![Image text](images/abstractFactoryMode.jpg)
+ 
+ ---
+ 
+ **Singleton Pattern(单例模式)**
+ * The Singleton Pattern is one of the simplest design patterns in Java. This type of design pattern is a creative model 
+ that provides the best way to create objects.  
+ This pattern involves a single class that is responsible for creating your own objects while ensuring that only a 
+ single object is created. This class provides a way to access its unique object, which can be accessed directly without 
+ the need to instantiate an object of that class.  
+ (单例模式（Singleton Pattern）是 Java 中最简单的设计模式之一。这种类型的设计模式属于创建型模式，它提供了一种创建对象的最佳方式。
+  这种模式涉及到一个单一的类，该类负责创建自己的对象，同时确保只有单个对象被创建。这个类提供了一种访问其唯一的对象的方式，
+  可以直接访问，不需要实例化该类的对象。)
+ * note:
+   1. A singleton class can only have one instance.
+   2. The singleton class must create its own unique instance.
+   3. The singleton class must provide this instance to all other objects.  
+ (注意： 1、单例类只能有一个实例。2、单例类必须自己创建自己的唯一实例。3、单例类必须给所有其他对象提供这一实例。)
+ * Intent: Ensure that a class has only one instance and provides a global access point to access it.  
+ (意图：保证一个类仅有一个实例，并提供一个访问它的全局访问点。)
+ * The main solution: a globally used class is frequently created and destroyed.  
+ (主要解决：一个全局使用的类频繁地创建与销毁。)
+ * When to use: When you want to control the number of instances and save system resources.  
+ (何时使用：当您想控制实例数目，节省系统资源的时候。)
+ * How to solve: Determine whether the system already has this singleton, if it is, return it, if not, create it.  
+ (如何解决：判断系统是否已经有这个单例，如果有则返回，如果没有则创建。)
+ * Key code: The constructor is private.  
+ (关键代码：构造函数是私有的。)
+ * Application examples: 1. A party can only have one secretary. 2, Windows is multi-process multi-threaded, when 
+ operating a file, it is inevitable that multiple processes or threads operate a file at the same time, so all files 
+ must be processed through a unique instance. 3, some device managers are often designed as a single-case mode, such as 
+ a computer with two printers, the output must be processed when two printers can not print the same file.  
+ (应用实例： 1、一个党只能有一个书记。 2、Windows 是多进程多线程的，在操作一个文件的时候，就不可避免地出现多个进程或线程同时操作一个
+ 文件的现象，所以所有文件的处理必须通过唯一的实例来进行。 3、一些设备管理器常常设计为单例模式，比如一个电脑有两台打印机，
+ 在输出的时候就要处理不能两台打印机打印同一个文件。)
+ * Advantages: 1. There is only one instance in memory, which reduces the memory overhead, especially the frequent 
+ creation and destruction of instances (such as the management college home page cache). 2. Avoid multiple occupations 
+ of resources (such as writing file operations).  
+ (优点： 1、在内存里只有一个实例，减少了内存的开销，尤其是频繁的创建和销毁实例（比如管理学院首页页面缓存）。 
+ 2、避免对资源的多重占用（比如写文件操作）。)
+ * Disadvantages: No interface, no inheritance, conflict with a single responsibility principle, a class should only 
+ care about internal logic, and not care about how to instantiate it outside.  
+ (缺点：没有接口，不能继承，与单一职责原则冲突，一个类应该只关心内部逻辑，而不关心外面怎么样来实例化。)
+ * Use scenario: 1. Request to produce a unique serial number. 2, the counter in the WEB, do not need to be added once 
+ in the database every time you refresh, use a single case to cache first. 3. An object created needs to consume too 
+ many resources, such as the connection of I/O to the database.  
+ (使用场景： 1、要求生产唯一序列号。 2、WEB 中的计数器，不用每次刷新都在数据库里加一次，用单例先缓存起来。 
+ 3、创建的一个对象需要消耗的资源过多，比如 I/O 与数据库的连接等。)
+ * Note: The getInstance() method needs to use the synchronous lock synchronized (Singleton.class) to prevent multiple 
+ threads from entering at the same time, causing the instance to be instantiated multiple times.  
+ (注意事项：getInstance() 方法中需要使用同步锁 synchronized (Singleton.class) 防止多线程同时进入造成 instance 被多次实例化。)
+ * UML Class picture:    
+ ![Image text](images/singletonMode.png)
 
 
 
