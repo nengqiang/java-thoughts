@@ -164,7 +164,7 @@
  * Disadvantages: No interface, no inheritance, conflict with a single responsibility principle, a class should only 
  care about internal logic, and not care about how to instantiate it outside.  
  (缺点：没有接口，不能继承，与单一职责原则冲突，一个类应该只关心内部逻辑，而不关心外面怎么样来实例化。)
- * Use scenario: 1. Request to produce a unique serial number. 2, the counter in the WEB, do not need to be added once 
+ * Usage scenarios: 1. Request to produce a unique serial number. 2, the counter in the WEB, do not need to be added once 
  in the database every time you refresh, use a single case to cache first. 3. An object created needs to consume too 
  many resources, such as the connection of I/O to the database.  
  (使用场景： 1、要求生产唯一序列号。 2、WEB 中的计数器，不用每次刷新都在数据库里加一次，用单例先缓存起来。 
@@ -173,10 +173,46 @@
  threads from entering at the same time, causing the instance to be instantiated multiple times.  
  (注意事项：getInstance() 方法中需要使用同步锁 synchronized (Singleton.class) 防止多线程同时进入造成 instance 被多次实例化。)
  * UML Class picture:    
- ![Image text](images/singletonMode.png)
-
-
-
+ ![Image text](images/singletonMode.png)  
+ 
+ ---
+ 
+ **Builder Pattern**(建造者模式)
+ * The Builder Pattern uses a number of simple objects to build a complex object step by step. This type of design 
+ pattern is a creative model that provides the best way to create objects.  
+ A Builder class will construct the final object step by step. The Builder class is independent of other objects.  
+ (建造者模式（Builder Pattern）使用多个简单的对象一步一步构建成一个复杂的对象。这种类型的设计模式属于创建型模式，
+ 它提供了一种创建对象的最佳方式。一个 Builder 类会一步一步构造最终的对象。该 Builder 类是独立于其他对象的。)
+ * Intent: Separating a complex build from its representation so that the same build process can create 
+ different representations.  
+ (意图：将一个复杂的构建与其表示相分离，使得同样的构建过程可以创建不同的表示。)
+ * The main solution: mainly in the software system, sometimes faced with the creation of "a complex object", which is 
+ usually composed of sub-objects of various parts with certain algorithms; due to changes in requirements, the various 
+ parts of this complex object are often faced Dramatic changes, but the algorithm that combines them is relatively stable.  
+ (主要解决：主要解决在软件系统中，有时候面临着"一个复杂对象"的创建工作，其通常由各个部分的子对象用一定的算法构成；由于需求的变化，
+ 这个复杂对象的各个部分经常面临着剧烈的变化，但是将它们组合在一起的算法却相对稳定。)
+ * When to use: Some basic components do not change, and their combinations often change.  
+ (何时使用：一些基本部件不会变，而其组合经常变化的时候。)
+ * How to solve: separate the change from the constant.  
+ (如何解决：将变与不变分离开。)
+ * Key Code: Builder: Create and provide instances, Director: Manage dependencies for built instances.  
+ (关键代码：建造者：创建和提供实例，导演：管理建造出来的实例的依赖关系。)
+ * Application examples: 1. Going to KFC, hamburger, cola, French fries, fried chicken wings, etc. are unchanged, and the 
+ combination is constantly changing, producing a so-called "package". 2. StringBuilder in JAVA.  
+ (应用实例： 1、去肯德基，汉堡、可乐、薯条、炸鸡翅等是不变的，而其组合是经常变化的，生成出所谓的"套餐"。2、JAVA 中的 StringBuilder。)
+ * Advantages: 1. The builder is independent and easy to expand. 2, easy to control the details of the risk.  
+ (优点： 1、建造者独立，易扩展。 2、便于控制细节风险。)
+ * Disadvantages: 1. products must have in common, the scope is limited. 2. If the internal changes are complicated, 
+ there will be many construction classes.  
+ (缺点： 1、产品必须有共同点，范围有限制。 2、如内部变化复杂，会有很多的建造类。)
+ * Usage scenarios: 1. The objects that need to be generated have a complex internal structure. 2. The internal 
+ properties of the objects that need to be generated depend on each other.  
+ (使用场景： 1、需要生成的对象具有复杂的内部结构。 2、需要生成的对象内部属性本身相互依赖。)
+ * Note: The difference from the factory model is that the builder mode pays more attention to the order of assembly 
+ of the parts.  
+ (注意事项：与工厂模式的区别是：建造者模式更加关注与零件装配的顺序。)
+ * UML Class picture:    
+ ![Image text](images/builderPattern.jpg)  
 
 
 
