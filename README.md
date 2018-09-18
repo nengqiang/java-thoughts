@@ -277,8 +277,64 @@
  * UML Class picture:    
  ![Image text](images/prototypeMode.jpg)  
 
+---
 
-
+**Adapter Pattern(适配器模式)**
+ * The Adapter Pattern is a bridge between two incompatible interfaces. This type of design pattern is a structured 
+ model that combines the functionality of two separate interfaces.  
+ This pattern involves a single class that is responsible for adding independent or incompatible interface functions. As 
+ a real example, the card reader acts as an adapter between the memory card and the notebook. You insert the memory card 
+ into the card reader and insert the card reader into the notebook so that the memory card can be read from the notebook.
+ We demonstrate the use of adapter mode with the following example. Among them, the audio player device can only play 
+ mp3 files and play vlc and mp4 files by using a more advanced audio player.  
+ (适配器模式（Adapter Pattern）是作为两个不兼容的接口之间的桥梁。这种类型的设计模式属于结构型模式，它结合了两个独立接口的功能。  
+  这种模式涉及到一个单一的类，该类负责加入独立的或不兼容的接口功能。举个真实的例子，读卡器是作为内存卡和笔记本之间的适配器。您将内存卡
+  插入读卡器，再将读卡器插入笔记本，这样就可以通过笔记本来读取内存卡。  
+  我们通过下面的实例来演示适配器模式的使用。其中，音频播放器设备只能播放mp3文件，通过使用一个更高级的音频播放器来播放vlc和mp4文件。)
+ * Intent: Convert the interface of one class to another interface that the client wants. The adapter mode allows those 
+ classes that would otherwise not work together due to incompatible interfaces to work together.  
+ (意图：将一个类的接口转换成客户希望的另外一个接口。适配器模式使得原本由于接口不兼容而不能一起工作的那些类可以一起工作。)
+ * The main solution: mainly solve in the software system, often put some "existing objects" into the new environment, 
+ and the interface required by the new environment is not satisfied by the current object.  
+ (主要解决：主要解决在软件系统中，常常要将一些"现存的对象"放到新的环境中，而新环境要求的接口是现对象不能满足的。)
+ * When to use: 1.The system needs to use existing classes, and such interfaces do not meet the needs of the system.   
+ 2.You want to create a reusable class for working with classes that don't have much to do with each other, including 
+ some that might be introduced in the future. These source classes don't necessarily have a consistent interface.   
+ 3.Insert a class into another class through interface conversion. (For example, tigers and birds, there is now a 
+ flying tiger. Adding an adapter without increasing the physical requirements, and having a tiger object in it, realizes 
+ the flying interface.)  
+ (何时使用： 1、系统需要使用现有的类，而此类的接口不符合系统的需要。 2、想要建立一个可以重复使用的类，用于与一些彼此之间没有太大关联的
+ 一些类，包括一些可能在将来引进的类一起工作，这些源类不一定有一致的接口。 3、通过接口转换，将一个类插入另一个类系中。（比如老虎和飞禽，
+ 现在多了一个飞虎，在不增加实体的需求下，增加一个适配器，在里面包容一个虎对象，实现飞的接口。）)
+ * How to solve: inheritance or dependency (recommended).  
+ (如何解决：继承或依赖（推荐）。)
+ * Key code: The adapter inherits or relies on existing objects to implement the desired target interface.  
+ (关键代码：适配器继承或依赖已有的对象，实现想要的目标接口。)
+ * Application examples: 1. American Electric 110V, China 220V, there must be an adapter to convert 110V to 220V. 
+ 2.JAVA JDK 1.1 provides the Enumeration interface, and the Iterator interface is provided in 1.2. If you want to use 
+ the 1.2 JDK, you need to convert the previous system's Enumeration interface to the Iterator interface. In this case, 
+ the adapter mode is required. 3. Run the WINDOWS program on LINUX. 4. jdbc in JAVA.  
+ (应用实例： 1、美国电器 110V，中国 220V，就要有一个适配器将 110V 转化为 220V。 2、JAVA JDK 1.1 提供了 Enumeration 接口，
+ 而在 1.2 中提供了 Iterator 接口，想要使用 1.2 的 JDK，则要将以前系统的 Enumeration 接口转化为 Iterator 接口，这时就需要适配器模式。 
+ 3、在 LINUX 上运行 WINDOWS 程序。 4、JAVA 中的 jdbc。)
+ * Advantages: 1. You can run any two unrelated classes together. 2. Improve the reuse of classes. 3. Increase the 
+ transparency of the class. 4. Good flexibility.  
+ (优点： 1、可以让任何两个没有关联的类一起运行。 2、提高了类的复用。 3、增加了类的透明度。 4、灵活性好。)
+ * Disadvantages: 1. Excessive use of the adapter will make the system very messy and difficult to grasp. For example, 
+ it is obvious that the call to the A interface is actually adapted to the implementation of the B interface. If a 
+ system has too many such situations, it is tantamount to a disaster. So if it's not necessary, you can refactor the 
+ system without using an adapter. 2. Since JAVA inherits at most one class, at most one adaptor class can be adapted, 
+ and the target class must be an abstract class.  
+ (缺点： 1、过多地使用适配器，会让系统非常零乱，不易整体进行把握。比如，明明看到调用的是 A 接口，其实内部被适配成了 B 接口的实现，
+ 一个系统如果太多出现这种情况，无异于一场灾难。因此如果不是很有必要，可以不使用适配器，而是直接对系统进行重构。 2.由于 JAVA 至多
+ 继承一个类，所以至多只能适配一个适配者类，而且目标类必须是抽象类。)
+ * Usage scenario: Motivated to modify the interface of a functioning system, then you should consider using the 
+ adapter mode.  
+ (使用场景：有动机地修改一个正常运行的系统的接口，这时应该考虑使用适配器模式。)
+ * Note: Adapters are not added at the time of detailed design, but rather to solve problems in the project being served.
+ (注意事项：适配器不是在详细设计时添加的，而是解决正在服役的项目的问题。)
+ * UML Class picture:    
+ ![Image text](images/adapterMode.png) 
 
 
 
