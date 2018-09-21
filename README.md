@@ -335,7 +335,59 @@
  (注意事项：适配器不是在详细设计时添加的，而是解决正在服役的项目的问题。)
  * UML Class picture:    
  ![Image text](images/adapterMode.png) 
-
+ 
+ ---
+ 
+ **Bridge Pattern(桥接模式)**
+ * Bridge is used to decouple abstraction and implementation so that the two can change independently. This type of 
+ design pattern is a structured pattern that provides decoupling between the two by providing a bridge between the 
+ abstraction and the implementation.  
+ This pattern involves an interface that acts as a bridge, making the functionality of the entity class independent of 
+ the interface implementation class. These two types of classes can be structurally changed without affecting each other.  
+ We use the following example to demonstrate the use of the Bridge Pattern. Among them, you can use the same abstract 
+ class method but different bridge implementation classes to draw circles of different colors.  
+ (桥接（Bridge）是用于把抽象化与实现化解耦，使得二者可以独立变化。这种类型的设计模式属于结构型模式，它通过提供抽象化和实现化之间的
+ 桥接结构，来实现二者的解耦。
+  这种模式涉及到一个作为桥接的接口，使得实体类的功能独立于接口实现类。这两种类型的类可被结构化改变而互不影响。
+  我们通过下面的实例来演示桥接模式（Bridge Pattern）的用法。其中，可以使用相同的抽象类方法但是不同的桥接实现类，来画出不同颜色的圆。) 
+ * Intent: Separate the abstract part from the implementation part so that they can all change independently.  
+ (意图：将抽象部分与实现部分分离，使它们都可以独立的变化。)
+ * The main solution: in the case of a variety of possible changes, the use of inheritance will cause class explosion 
+ problems, expansion is not flexible.  
+ (主要解决：在有多种可能会变化的情况下，用继承会造成类爆炸问题，扩展起来不灵活。)
+ * When to use: Implementing a system may have multiple angular classifications, each of which may change.  
+ (何时使用：实现系统可能有多个角度分类，每一种角度都可能变化。)
+ * How to solve: Separate this multi-angle classification, let them change independently, and reduce the coupling 
+ between them.  
+ (如何解决：把这种多角度分类分离出来，让它们独立变化，减少它们之间耦合。)
+ * Key code: Abstract class dependent implementation class.  
+ (关键代码：抽象类依赖实现类。)
+ * Application examples: 1. Pig Bajie reincarnation from the captain of the canopy to the pig, the mechanism of 
+ reincarnation will divide the world into two levels, namely: the soul and the flesh, the former is equivalent to 
+ abstraction, and the latter is equivalent to realization. Through the delegation of functions, the creature calls the 
+ function of the physical object so that the creature can dynamically select. 2. the switch on the wall, you can see the 
+ switch is abstract, do not care how to achieve inside.  
+ (应用实例： 1、猪八戒从天蓬元帅转世投胎到猪，转世投胎的机制将尘世划分为两个等级，即：灵魂和肉体，前者相当于抽象化，后者相当于实现化。
+ 生灵通过功能的委派，调用肉体对象的功能，使得生灵可以动态地选择。 2、墙上的开关，可以看到的开关是抽象的，不用管里面具体怎么实现的。)
+ * Advantages: 1. Separation of abstraction and implementation. 2. Excellent expansion ability. 
+ 3.the implementation details are transparent to the customer.  
+ (优点： 1、抽象和实现的分离。 2、优秀的扩展能力。 3、实现细节对客户透明。)
+ * Disadvantages: The introduction of bridging mode will increase the understanding and design difficulty of the system. 
+ Since the aggregation relationship is established in the abstraction layer, the developer is required to design and 
+ program the abstraction.  
+ (缺点：桥接模式的引入会增加系统的理解与设计难度，由于聚合关联关系建立在抽象层，要求开发者针对抽象进行设计与编程。)
+ * Usage scenarios: 1. If a system needs to add more flexibility between the abstracted role and the concrete role of 
+ the component, avoid establishing a static inheritance relationship between the two layers, and make them in the 
+ abstraction layer through the bridge mode. Establish an association. 2. Bridging mode is especially useful for systems 
+ that do not want to use inheritance or because the number of system classes increases dramatically because of 
+ multi-level inheritance. 3. A class has two independently changing dimensions, and both dimensions need to be extended.  
+ (使用场景： 1、如果一个系统需要在构件的抽象化角色和具体化角色之间增加更多的灵活性，避免在两个层次之间建立静态的继承联系，通过桥接模式
+ 可以使它们在抽象层建立一个关联关系。 2、对于那些不希望使用继承或因为多层次继承导致系统类的个数急剧增加的系统，桥接模式尤为适用。 
+ 3、一个类存在两个独立变化的维度，且这两个维度都需要进行扩展。)
+ * Note: For two independently changing dimensions, using bridge mode is a good fit.  
+ (注意事项：对于两个独立变化的维度，使用桥接模式再适合不过了。)
+  * UML Class picture:    
+  ![Image text](images/bridgeMode.png) 
 
 
 
