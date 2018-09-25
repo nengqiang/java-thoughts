@@ -445,6 +445,52 @@
  (注意事项：定义时为具体类。)
  * UML Class picture:    
  ![Image text](images/compositeMode.jpg)  
+ 
+ ---
+ 
+ **Decorator Pattern(装饰器模式)**
+ * The Decorator Pattern allows you to add new functionality to an existing object without changing its structure. 
+ This type of design pattern is a structured pattern that is a wrapper around an existing class.  
+ This pattern creates a decorating class that wraps the original class and provides additional functionality while 
+ maintaining the integrity of the class method signature.  
+ We use the following example to demonstrate the use of decorator mode. Among them, we will decorate a shape with 
+ different colors without changing the shape class.  
+ (装饰器模式（Decorator Pattern）允许向一个现有的对象添加新的功能，同时又不改变其结构。这种类型的设计模式属于结构型模式，
+ 它是作为现有的类的一个包装。
+  这种模式创建了一个装饰类，用来包装原有的类，并在保持类方法签名完整性的前提下，提供了额外的功能。
+  我们通过下面的实例来演示装饰器模式的用法。其中，我们将把一个形状装饰上不同的颜色，同时又不改变形状类。)
+ * Intent: Dynamically add some additional responsibilities to an object. In terms of adding functionality, the 
+ decorator mode is more flexible than generating subclasses.  
+ (意图：动态地给一个对象添加一些额外的职责。就增加功能来说，装饰器模式相比生成子类更为灵活。)
+ * The main solution: In general, we often use inheritance to extend a class. Since inheritance introduces static 
+ features into classes, and as the extended functionality increases, subclasses will swell.  
+ (主要解决：一般的，我们为了扩展一个类经常使用继承方式实现，由于继承为类引入静态特征，并且随着扩展功能的增多，子类会很膨胀。)
+ * When to use: Extend the class if you don't want to add a lot of subclasses.  
+ (何时使用：在不想增加很多子类的情况下扩展类。)
+ * How to solve: Divide specific functional responsibilities and inherit the decorator mode.  
+ (如何解决：将具体功能职责划分，同时继承装饰者模式。)
+ * Key Code: 1. The Component class acts as an abstraction and should not be implemented. 2. modify the class reference 
+ and inherit the Component class, the concrete extension class overrides the parent class method.  
+ (关键代码： 1、Component 类充当抽象角色，不应该具体实现。 2、修饰类引用和继承 Component 类，具体扩展类重写父类方法。)
+ * Application examples: 1. Sun Wukong has 72 changes. When he becomes a "temple", he is still a monkey at all, but he 
+ has the function of a temple. 2. No matter whether a picture has a picture frame or not, it can be hung on the wall, 
+ but usually there is a picture frame, and actually the picture frame is hung on the wall. Before hanging on the wall, 
+ the painting can be covered with glass and placed in the frame; at this time, the painting, the glass and the frame 
+ form an object.  
+ (应用实例： 1、孙悟空有 72 变，当他变成"庙宇"后，他的根本还是一只猴子，但是他又有了庙宇的功能。 2、不论一幅画有没有画框都可以挂在墙上，
+ 但是通常都是有画框的，并且实际上是画框被挂在墙上。在挂在墙上之前，画可以被蒙上玻璃，装到框子里；这时画、玻璃和画框形成了一个物体。)
+ * Advantages: Decorative and decorated classes can be developed independently and will not be coupled to each other. 
+ Decorative patterns are an alternative to inheritance, and decorative patterns can dynamically extend the functionality 
+ of an implementation class.  
+ (优点：装饰类和被装饰类可以独立发展，不会相互耦合，装饰模式是继承的一个替代模式，装饰模式可以动态扩展一个实现类的功能。)
+ * Disadvantages: Multi-layer decoration is more complicated.  
+ (缺点：多层装饰比较复杂。)
+ * Usage scenarios: 1. Extend the functionality of a class. 2. Dynamically add functions and dynamically cancel.  
+ (使用场景： 1、扩展一个类的功能。 2、动态增加功能，动态撤销。)
+ * Note: Can replace inheritance.  
+ (注意事项：可代替继承。)
+ * UML Class picture:    
+ ![Image text](images/decoratorMode.jpg) 
 
 
 

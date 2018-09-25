@@ -1,18 +1,16 @@
-package com.hnq.study.bridgepattern.service.impl;
+package com.hnq.study.decoratorpattern.service.impl;
 
-import com.hnq.study.bridgepattern.service.IDraw;
+import com.hnq.study.decoratorpattern.service.IShape;
 
 /**
- * 空心圆
- *
  * @author henengqiang
- * @date 2018/9/19
+ * @date 2018/9/25
  */
-public class GreenCircle implements IDraw {
+public class Circle implements IShape {
 
     @Override
-    public void drawCircle(int radius, int pointX, int pointY) {
-        System.out.println("Color: green");
+    public void draw() {
+        int radius = 10;
         for (int y = 0; y <= 2 * radius; y += 2) {
             int x = (int) Math.round(radius - Math.sqrt(radius * radius - (radius - y) * (radius - y)));
             int l = 2 * (radius - x);

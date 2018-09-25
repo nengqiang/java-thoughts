@@ -3,6 +3,8 @@ package com.hnq.study.bridgepattern.service.impl;
 import com.hnq.study.bridgepattern.service.IDraw;
 
 /**
+ * 实心圆
+ *
  * @author henengqiang
  * @date 2018/9/19
  */
