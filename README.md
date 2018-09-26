@@ -535,8 +535,51 @@
  * UML Class picture:    
  ![Image text](images/facadeMode.jpg) 
  
-
-
+ ---
+ 
+ **Flyweight Pattern(享元模式)**
+ * The Flyweight Pattern is mainly used to reduce the number of created objects to reduce memory usage and improve 
+ performance. This type of design pattern is a structured pattern that provides a way to reduce the number of objects 
+ and improve the structure of the objects needed for the application.  
+ The Flyweight mode attempts to reuse an existing homogeneous object, and if no matching object is found, a new object 
+ is created. We will demonstrate this pattern by creating 5 objects to draw 20 circles distributed in different 
+ locations. Since there are only 5 colors available, the color property is used to check for existing Circle objects.  
+ (享元模式（Flyweight Pattern）主要用于减少创建对象的数量，以减少内存占用和提高性能。这种类型的设计模式属于结构型模式，它提供了减少
+ 对象数量从而改善应用所需的对象结构的方式。
+  享元模式尝试重用现有的同类对象，如果未找到匹配的对象，则创建新对象。我们将通过创建 5 个对象来画出 20 个分布于不同位置的圆来演示
+  这种模式。由于只有 5 种可用的颜色，所以 color 属性被用来检查现有的 Circle 对象。)
+ * Intent: Effectively support a large number of fine-grained objects using shared technologies.  
+ (意图：运用共享技术有效地支持大量细粒度的对象。)
+ * The main solution: when there are a large number of objects, it may cause memory overflow, we abstract the common 
+ parts, if there is the same business request, directly return the existing objects in memory, avoid re-creation.  
+ (主要解决：在有大量对象时，有可能会造成内存溢出，我们把其中共同的部分抽象出来，如果有相同的业务请求，直接返回在内存中已有的对象，避免重新创建。)
+ * When to use: 1. There are a large number of objects in the system. 2. These objects consume a lot of memory. 
+ 3.Most of the state of these objects can be externalized. 4. These objects can be divided into many groups according 
+ to the intrinsic state. When the exogenous objects are removed from the object, each group of objects can be replaced 
+ by an object. 5. The system does not depend on the identity of these objects, these objects are indistinguishable.  
+ (何时使用： 1、系统中有大量对象。 2、这些对象消耗大量内存。 3、这些对象的状态大部分可以外部化。 4、这些对象可以按照内蕴状态分为很多组，
+ 当把外蕴对象从对象中剔除出来时，每一组对象都可以用一个对象来代替。 5、系统不依赖于这些对象身份，这些对象是不可分辨的。)
+ * How to solve: judge with a unique identification code, if there is in memory, return the object identified by this 
+ unique identification code.  
+ (如何解决：用唯一标识码判断，如果在内存中有，则返回这个唯一标识码所标识的对象。)
+ * Key code: Store these objects with HashMap.  
+ (关键代码：用 HashMap 存储这些对象。)
+ * Application examples: 1. The String in JAVA, if there is one, return, if not, create a string and save it in the 
+ string cache pool. 2. the data pool of the database.  
+ (应用实例： 1、JAVA 中的 String，如果有则返回，如果没有则创建一个字符串保存在字符串缓存池里面。 2、数据库的数据池。)
+ * Advantages: greatly reduce the creation of objects, reduce the memory of the system, and improve efficiency.  
+ (优点：大大减少对象的创建，降低系统的内存，使效率提高。)
+ * Disadvantages: Increase the complexity of the system, need to separate the external state and internal state, and the 
+ external state has inherent properties, and should not change with the internal state, otherwise it will cause 
+ system confusion.  
+ (缺点：提高了系统的复杂度，需要分离出外部状态和内部状态，而且外部状态具有固有化的性质，不应该随着内部状态的变化而变化，否则会造成系统的混乱。)
+ * Usage scenarios: 1. The system has a large number of similar objects. 2. The scene of the buffer pool is required.  
+ (使用场景： 1、系统有大量相似对象。 2、需要缓冲池的场景。)
+ * Note: 1. pay attention to the division of the external state and internal state, otherwise it may cause thread safety 
+ problems. 2. These classes must have a factory object to control.  
+ (注意事项： 1、注意划分外部状态和内部状态，否则可能会引起线程安全问题。 2、这些类必须有一个工厂对象加以控制。)
+ * UML Class picture:    
+ ![Image text](images/flyweightMode.jpg) 
 
 
 
