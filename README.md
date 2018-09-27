@@ -631,7 +631,58 @@
  2、和装饰器模式的区别：装饰器模式为了增强功能，而代理模式是为了加以控制。)
  * UML Class picture:    
  ![Image text](images/proxyMode.jpg) 
-
+ 
+ ---
+ 
+ **Chain of Responsibility Pattern(责任链模式)**
+ * As the name implies, the Chain of Responsibility Pattern creates a chain of recipient objects for the request. This 
+ mode gives the type of request and decouples the sender and receiver of the request. This type of design pattern is a 
+ behavioral model.  
+ In this mode, typically each recipient contains a reference to another recipient. If an object cannot process the 
+ request, it passes the same request to the next recipient, and so on.  
+ (顾名思义，责任链模式（Chain of Responsibility Pattern）为请求创建了一个接收者对象的链。这种模式给予请求的类型，对请求的发送者
+  和接收者进行解耦。这种类型的设计模式属于行为型模式。
+  在这种模式中，通常每个接收者都包含对另一个接收者的引用。如果一个对象不能处理该请求，那么它会把相同的请求传给下一个接收者，依此类推。)
+ * Intent: Avoid coupling the request sender to the receiver, making it possible for multiple objects to receive 
+ requests, concatenating these objects into a chain, and passing requests along this chain until an object processes it.  
+ (意图：避免请求发送者与接收者耦合在一起，让多个对象都有可能接收请求，将这些对象连接成一条链，并且沿着这条链传递请求，直到有对象处理它为止。)
+ * The main solution is that the processor on the chain of responsibility is responsible for processing the request. 
+ The client only needs to send the request to the chain of responsibility. It does not need to care about the processing 
+ details of the request and the delivery of the request, so the chain of responsibility will request the sender and the 
+ requester. Decoupled.  
+ (主要解决：职责链上的处理者负责处理请求，客户只需要将请求发送到职责链上即可，无须关心请求的处理细节和请求的传递，
+ 所以职责链将请求的发送者和请求的处理者解耦了。)
+ * When to use: Filter a lot when processing messages.  
+ (何时使用：在处理消息的时候以过滤很多道。)
+ * How to solve: The intercepted classes all implement a unified interface.  
+ (如何解决：拦截的类都实现统一接口。)
+ * Key code: Handler inside to aggregate itself, determine whether it is appropriate in HandleRequest, if it does not 
+ reach the condition, then pass it down, to whom to pass before the set.  
+ (关键代码：Handler 里面聚合它自己，在 HandleRequest 里判断是否合适，如果没达到条件则向下传递，向谁传递之前 set 进去。)
+ * Application examples: 1. "Drums and flowers" in the Dream of Red Mansions. 2. The event in JS bubbling. 3, JAVA WEB 
+ Apache Tomcat processing of Encoding, Struts2 interceptor, jsp servlet Filter.  
+ (应用实例： 1、红楼梦中的"击鼓传花"。 2、JS 中的事件冒泡。 3、JAVA WEB 中 Apache Tomcat 对 Encoding 的处理，
+ Struts2 的拦截器，jsp servlet 的 Filter。)
+ * Advantages: 1, reduce coupling. It decouple the sender and receiver of the request. 2, simplify the object. 
+ So that the object does not need to know the structure of the chain. 3, enhance the flexibility of assigning 
+ responsibilities to objects. By changing the members in the chain or by mobilizing their order, they can allow new 
+ responsibilities to be added or deleted dynamically. 4, it is very convenient to add new request processing classes.  
+ (优点： 1、降低耦合度。它将请求的发送者和接收者解耦。 2、简化了对象。使得对象不需要知道链的结构。 3、增强给对象指派职责的灵活性。
+ 通过改变链内的成员或者调动它们的次序，允许动态地新增或者删除责任。 4、增加新的请求处理类很方便。)
+ * Disadvantages: 1, there is no guarantee that the request will be received. 2. The system performance will be affected 
+ to some extent, and it is not convenient to debug the code, which may cause circular calls. 3, it may not be easy to 
+ observe the characteristics of the runtime, hinders debugging.  
+ (缺点： 1、不能保证请求一定被接收。 2、系统性能将受到一定影响，而且在进行代码调试时不太方便，可能会造成循环调用。 3、可能不容易观察
+ 运行时的特征，有碍于除错。)
+ * Scenarios: 1. Multiple objects can process the same request, and which object handles the request is automatically 
+ determined by the runtime. 2, submit a request to one of multiple objects without specifying the receiver. 3, you can 
+ dynamically specify a set of objects to process requests.  
+ (使用场景： 1、有多个对象可以处理同一个请求，具体哪个对象处理该请求由运行时刻自动确定。 2、在不明确指定接收者的情况下，向多个对象中的
+ 一个提交一个请求。 3、可动态指定一组对象处理请求。)
+ * Note: there are many applications in JAVA WEB.  
+ (注意事项：在 JAVA WEB 中遇到很多应用。)
+ * UML Class picture:    
+ ![Image text](images/chainMode.jpg) 
 
 
 
