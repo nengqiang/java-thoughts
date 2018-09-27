@@ -683,8 +683,49 @@
  (注意事项：在 JAVA WEB 中遇到很多应用。)
  * UML Class picture:    
  ![Image text](images/chainMode.jpg) 
-
-
+ 
+ ---
+ 
+ **Command Pattern(命令模式)**
+ * The Command Pattern is a data-driven design pattern that is a behavioral pattern. The request is wrapped in an object 
+ in the form of a command and passed to the calling object. The calling object looks for a suitable object that can 
+ handle the command and passes the command to the corresponding object, which executes the command.  
+ (命令模式（Command Pattern）是一种数据驱动的设计模式，它属于行为型模式。请求以命令的形式包裹在对象中，并传给调用对象。调用对象寻找可以
+ 处理该命令的合适的对象，并把该命令传给相应的对象，该对象执行命令。)
+ * Intent: Encapsulate a request into an object so that you can parameterize the client with different requests.  
+ (意图：将一个请求封装成一个对象，从而使您可以用不同的请求对客户进行参数化。)
+ * The main solution: in the software system, the behavior requester and the behavior implementer are usually a tightly 
+ coupled relationship, but in some occasions, such as the need to record, undo or redo the transaction, transaction, 
+ etc., this can not resist A tightly coupled design of changes is not appropriate.  
+ (主要解决：在软件系统中，行为请求者与行为实现者通常是一种紧耦合的关系，但某些场合，比如需要对行为进行记录、撤销或重做、事务等处理时，
+ 这种无法抵御变化的紧耦合的设计就不太合适。)
+ * When to use: In some cases, such as the "recording, undo / redo, transaction" and other actions, this tight coupling 
+ that can not resist changes is not appropriate. In this case, how to decouple the "behavior requester" from the 
+ "behavior implementer"? By abstracting a set of behaviors into objects, you can achieve loose coupling between the two.  
+ (何时使用：在某些场合，比如要对行为进行"记录、撤销/重做、事务"等处理，这种无法抵御变化的紧耦合是不合适的。在这种情况下，如何将
+ "行为请求者"与"行为实现者"解耦？将一组行为抽象为对象，可以实现二者之间的松耦合。)
+ * How to solve: The caller is called by the caller to execute the command, in the order: caller → recipient → command.  
+ (如何解决：通过调用者调用接受者执行命令，顺序：调用者→接受者→命令。)
+ * Key code: define three roles: 1, receive the real command execution object 2, Command 3, invoker use the entry of 
+ the command object  
+ (关键代码：定义三个角色：1、received 真正的命令执行对象 2、Command 3、invoker 使用命令对象的入口)
+ * Application example: Action core controller in struts 1 There is only one ActionServlet, which is equivalent to 
+ Invoker, and the model layer class will have different model classes with different applications, which is equivalent 
+ to a specific Command.  
+ (应用实例：struts 1 中的 action 核心控制器 ActionServlet 只有一个，相当于 Invoker，而模型层的类会随着不同的应用有不同的模型类，
+ g相当于具体的 Command。)
+ * Advantages: 1. Reduced system coupling. 2. New commands can be easily added to the system.  
+ (优点： 1、降低了系统耦合度。 2、新的命令可以很容易添加到系统中去。)
+ * Disadvantages: Using command mode may cause some systems to have too many specific command classes.  
+ (缺点：使用命令模式可能会导致某些系统有过多的具体命令类。)
+ * Usage scenario: Command mode can be used in places where the command is considered, for example: 1. Each button in 
+ the GUI is a command. 2. Simulate CMD.  
+ (使用场景：认为是命令的地方都可以使用命令模式，比如： 1、GUI 中每一个按钮都是一条命令。 2、模拟 CMD。)
+ * Note: The system needs to support the command undo operation and recovery operation. You can also consider using the 
+ command mode, see the extension of the command mode.  
+ (注意事项：系统需要支持命令的撤销(Undo)操作和恢复(Redo)操作，也可以考虑使用命令模式，见命令模式的扩展。)
+ * UML Class picture:    
+ ![Image text](images/commandMode.jpg) 
 
 
 
