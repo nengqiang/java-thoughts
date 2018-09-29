@@ -766,6 +766,51 @@
  (注意事项：可利用场景比较少，JAVA 中如果碰到可以用 expression4J 代替。)
  * UML Class picture:    
  ![Image text](images/interpreterMode.jpg)
+ 
+ ---
+ 
+ **Iterator Pattern(迭代器模式)**
+ * The Iterator Pattern is a very common design pattern in Java and .Net programming environments. This pattern is used 
+ to sequentially access the elements of the collection object without knowing the underlying representation of the 
+ collection object.  
+ The iterator mode is a behavioral mode.  
+ (迭代器模式（Iterator Pattern）是 Java 和 .Net 编程环境中非常常用的设计模式。这种模式用于顺序访问集合对象的元素，不需要知道集合对象
+ 的底层表示。
+  迭代器模式属于行为型模式。)
+ * Intent: Provides a way to sequentially access individual elements of an aggregated object without exposing the 
+ internal representation of the object.  
+ (意图：提供一种方法顺序访问一个聚合对象中各个元素, 而又无须暴露该对象的内部表示。)
+ * The main solution: different ways to traverse the entire integration object.  
+ (主要解决：不同的方式来遍历整个整合对象。)
+ * When to use: Traverse an aggregate object.  
+ (何时使用：遍历一个聚合对象。)
+ * How to solve: Hand over the responsibility of moving between elements to the iterator instead of the aggregate object.  
+ (如何解决：把在元素之间游走的责任交给迭代器，而不是聚合对象。)
+ * Key code: Define the interface: hasNext, next.  
+ (关键代码：定义接口：hasNext, next。)
+ * Application example: iterator in JAVA.  
+ (应用实例：JAVA 中的 iterator。)
+ * Advantages: 1. It supports traversing an aggregate object in different ways. 2. The iterator simplifies the 
+ aggregation class. 3. There can be multiple traversals on the same aggregate. 4. In the iterator mode, it is convenient 
+ to add new aggregation classes and iterator classes without modifying the original code.   
+ (优点： 1、它支持以不同的方式遍历一个聚合对象。 2、迭代器简化了聚合类。 3、在同一个聚合上可以有多个遍历。 4、在迭代器模式中，增加新的
+ 聚合类和迭代器类都很方便，无须修改原有代码。)
+ * Disadvantages: Since the iterator mode separates the responsibility of storing data from traversing data, adding a 
+ new aggregation class requires adding a new iterator class, and the number of classes increases in pairs, which 
+ increases the complexity of the system to some extent.  
+ (缺点：由于迭代器模式将存储数据和遍历数据的职责分离，增加新的聚合类需要对应增加新的迭代器类，类的个数成对增加，这在一定程度上增加了系统
+ 的复杂性。)
+ * Usage scenario: 1. Access the content of an aggregate object without exposing its internal representation. 2, need to 
+ provide a variety of traversal methods for the aggregate object. 3. Provide a unified interface for traversing different 
+ aggregation structures.  
+ (使用场景： 1、访问一个聚合对象的内容而无须暴露它的内部表示。 2、需要为聚合对象提供多种遍历方式。 3、为遍历不同的聚合结构提供一个统一的接口。)
+ * Note: The iterator pattern separates the traversal behavior of the collection object, abstracting an iterator class 
+ to be responsible, so that it can not expose the internal structure of the collection, but also allow external code to 
+ transparently access the data inside the collection.  
+ (注意事项：迭代器模式就是分离了集合对象的遍历行为，抽象出一个迭代器类来负责，这样既可以做到不暴露集合的内部结构，又可让外部代码透明地访
+ 问集合内部的数据。)
+ * UML Class picture:    
+ ![Image text](images/iteratorMode.jpg)
 
 
 
