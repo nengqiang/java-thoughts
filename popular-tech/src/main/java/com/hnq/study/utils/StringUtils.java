@@ -23,11 +23,7 @@ public class StringUtils {
             StringBuilder hexString = new StringBuilder();
             for (Byte hash : hashes) {
                 String hex = Integer.toHexString(0xff & hash);
-                if (hex.length() == 1) {
-                    hexString.append("0");
-                } else {
-                    hexString.append(hex);
-                }
+                hexString.append(hex.length() == 1 ? "0" : hex);
             }
             return hexString.toString();
         } catch (Exception e) {
