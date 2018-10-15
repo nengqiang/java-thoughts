@@ -811,8 +811,48 @@
  问集合内部的数据。)
  * UML Class picture:    
  ![Image text](images/iteratorMode.jpg)
-
-
+ 
+ ---
+ 
+ **Mediator Pattern(中介者模式)**
+ * The Mediator Pattern is used to reduce the communication complexity between multiple objects and classes. This 
+ pattern provides a mediation class that typically handles communication between different classes and supports loose 
+ coupling to make the code easy to maintain. The mediator mode is a behavioral mode.    
+ (中介者模式（Mediator Pattern）是用来降低多个对象和类之间的通信复杂性。这种模式提供了一个中介类，该类通常处理不同类之间的通信，并支持
+ 松耦合，使代码易于维护。中介者模式属于行为型模式。)
+ * Intent: Encapsulate a series of object interactions with a mediation object that allows the objects to be explicitly 
+ referenced to each other, making them loosely coupled and independently changing the interaction between them.  
+ (意图：用一个中介对象来封装一系列的对象交互，中介者使各对象不需要显式地相互引用，从而使其耦合松散，而且可以独立地改变它们之间的交互。)
+ * The main solution: there is a large number of associations between objects and objects, which will inevitably lead to 
+ the complexity of the system structure. If an object changes, we also need to track the objects associated with it and 
+ make corresponding processing.   
+ (主要解决：对象与对象之间存在大量的关联关系，这样势必会导致系统的结构变得很复杂，同时若一个对象发生改变，我们也需要跟踪与之相关联的对象
+ ，同时做出相应的处理。)
+ * When to use: Multiple classes are coupled to each other to form a mesh structure.  
+ (何时使用：多个类相互耦合，形成了网状结构。)
+ * How to solve: Separate the above network structure into a star structure.  
+ (如何解决：将上述网状结构分离为星型结构。)
+ * Key code: The communication between objects Colleague is encapsulated into a single class.  
+ (关键代码：对象 Colleague 之间的通信封装到一个类中单独处理。)
+ * Application examples: 1. Before China joined the WTO, each country traded with each other and its structure was 
+ complicated. Now it is the mutual trade of various countries through the WTO. 2. Airport dispatch system. 3. The MVC 
+ framework, where C (controller) is the intermediary of M (model) and V (view).  
+ (应用实例： 1、中国加入 WTO 之前是各个国家相互贸易，结构复杂，现在是各个国家通过 WTO 来互相贸易。 2、机场调度系统。 3、MVC 框架，
+ 其中C（控制器）就是 M（模型）和 V（视图）的中介者。)
+ * Advantages: 1. Reduce the complexity of the class and convert one-to-many into one-to-one. 2. Decoupling between 
+ classes. 3. Meet the Dimit principle.  
+ (优点： 1、降低了类的复杂度，将一对多转化成了一对一。 2、各个类之间的解耦。 3、符合迪米特原则。)
+ * Disadvantages: The intermediary will be huge and complicated and difficult to maintain.  
+ (缺点：中介者会庞大，变得复杂难以维护。)
+ * Usage scenarios: 1. There are relatively complex reference relationships between objects in the system, which makes 
+ the dependency structure between them confusing and difficult to reuse the object. 2, I want to encapsulate the 
+ behavior in multiple classes through an intermediate class, but do not want to generate too many subclasses.  
+ (使用场景： 1、系统中对象之间存在比较复杂的引用关系，导致它们之间的依赖关系结构混乱而且难以复用该对象。 2、想通过一个中间类来封装
+ 多个类中的行为，而又不想生成太多的子类。)
+ * Note: You should not use it when your duties are confusing.  
+ (注意事项：不应当在职责混乱的时候使用。)
+  * UML Class picture:    
+  ![Image text](images/mediatorMode.jpg)
 
 
 
