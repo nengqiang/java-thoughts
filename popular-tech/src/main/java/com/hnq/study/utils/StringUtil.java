@@ -9,7 +9,7 @@ import java.util.Base64;
  * @author henengqiang
  * @date 2018/8/22
  */
-public class StringUtils {
+public class StringUtil {
 
     /**
      * SHA256算法加密（生成电子签名）

@@ -9,7 +9,7 @@ import java.util.Date;
  * @author henengqiang
  * @date 2018/8/25
  */
-public class DateUtils {
+public class DateUtil {
 
     /**
      * Calendar --> String
