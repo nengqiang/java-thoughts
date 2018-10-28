@@ -1,6 +1,6 @@
 package com.hnq.study.blockchain;
 
-import com.hnq.study.utils.StringUtils;
+import com.hnq.study.utils.StringUtil;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -52,7 +52,7 @@ public class Block implements Serializable {
     }
 
     public String calculateHash() {
-        return StringUtils.sha256(previousHash + Long.toString(timeStamp) + Integer.toString(nonce) + data);
+        return StringUtil.sha256(previousHash + Long.toString(timeStamp) + Integer.toString(nonce) + data);
     }
 
     public void mineBlock(int difficulty) {

@@ -851,8 +851,49 @@
  多个类中的行为，而又不想生成太多的子类。)
  * Note: You should not use it when your duties are confusing.  
  (注意事项：不应当在职责混乱的时候使用。)
-  * UML Class picture:    
-  ![Image text](images/mediatorMode.jpg)
+ * UML Class picture:    
+ ![Image text](images/mediatorMode.jpg)
+  
+ ---
+ 
+ **Memento Pattern(备忘录模式)**
+ * The Memento Pattern saves a state of an object to restore the object when appropriate. The memo mode is a behavioral 
+ mode.  
+ (备忘录模式（Memento Pattern）保存一个对象的某个状态，以便在适当的时候恢复对象。备忘录模式属于行为型模式。)
+ * Intent: Captures the internal state of an object without destroying encapsulation and saves the state outside of the 
+ object.  
+ (意图：在不破坏封装性的前提下，捕获一个对象的内部状态，并在该对象之外保存这个状态。)
+ * The main solution: the so-called memo mode captures the internal state of an object without destroying the package, 
+ and saves the state outside the object, so that the object can be restored to the original saved state later.  
+ (主要解决：所谓备忘录模式就是在不破坏封装的前提下，捕获一个对象的内部状态，并在该对象之外保存这个状态，这样可以在以后将对象恢复到原先保存的状态。)
+ * When to use: Many times we always need to record the internal state of an object. The purpose of this is to allow the 
+ user to cancel the indeterminate or erroneous operation, and to return to his original state, so that he has 
+ "repentance medicine" to eat.  
+ (何时使用：很多时候我们总是需要记录一个对象的内部状态，这样做的目的就是为了允许用户取消不确定或者错误的操作，能够恢复到他原先的状态，
+ 使得他有"后悔药"可吃。)
+ * How to solve: Specially store object state through a memo class.  
+ (如何解决：通过一个备忘录类专门存储对象状态。)
+ * Key code: The customer is not coupled to the memo class and is coupled to the memo management class.  
+ (关键代码：客户不与备忘录类耦合，与备忘录管理类耦合。)
+ * Application examples: 1. Regret medicine. 2. Archive when playing games. 3. ctrl + z in Windows. 4. Backward in IE. 
+ 4.Database transaction management.  
+ (应用实例： 1、后悔药。 2、打游戏时的存档。 3、Windows 里的 ctrl + z。 4、IE 中的后退。 4、数据库的事务管理。)
+ * Advantages: 1. Provide users with a mechanism to restore the state, which can make the user return to a historical 
+ state more conveniently. 2. The encapsulation of information is implemented so that the user does not need to care 
+ about the preservation details of the state.  
+ (优点： 1、给用户提供了一种可以恢复状态的机制，可以使用户能够比较方便地回到某个历史的状态。 2、实现了信息的封装，
+ 使得用户不需要关心状态的保存细节。)
+ * Disadvantages: Consume resources. If the class has too many member variables, it will inevitably occupy a relatively 
+ large resource, and each save will consume a certain amount of memory.  
+ (缺点：消耗资源。如果类的成员变量过多，势必会占用比较大的资源，而且每一次保存都会消耗一定的内存。)
+ * Usage scenarios: 1. Relevant status scenarios where data needs to be saved/restored. 2. Provide a rollback operation.  
+ (使用场景： 1、需要保存/恢复数据的相关状态场景。 2、提供一个可回滚的操作。)
+ * Note: 1. In order to comply with the Dimit principle, a class of management memorandum is also added. 2. In order to 
+ save memory, you can use the prototype mode + memo mode.  
+ (注意事项： 1、为了符合迪米特原则，还要增加一个管理备忘录的类。 2、为了节约内存，可使用原型模式+备忘录模式。)
+ * UML Class picture:    
+ ![Image text](images/mementoMode.jpg) 
+ 
 
 
 

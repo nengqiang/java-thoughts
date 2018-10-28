@@ -1,6 +1,6 @@
 package com.hnq.study.blockchain;
 
-import com.hnq.study.utils.StringUtils;
+import com.hnq.study.utils.StringUtil;
 
 import java.security.PrivateKey;
 import java.security.PublicKey;
@@ -99,7 +99,7 @@ public class Transaction {
     }
 
     public boolean verifySignature() {
-        String data = StringUtils.getStringFromKey(sender) + StringUtils.getStringFromKey(recipient) + Float.toString(value);
+        String data = StringUtil.getStringFromKey(sender) + StringUtil.getStringFromKey(recipient) + Float.toString(value);
         return verifyECDSASig(sender, data, signature);
     }
 
@@ -124,7 +124,7 @@ public class Transaction {
     }
 
     public void generateSignature(PrivateKey privateKey) {
-        String data = StringUtils.getStringFromKey(sender) + StringUtils.getStringFromKey(recipient) + Float.toString(value);
+        String data = StringUtil.getStringFromKey(sender) + StringUtil.getStringFromKey(recipient) + Float.toString(value);
         signature = applyECDSASig(privateKey, data);
     }
 
@@ -142,9 +142,9 @@ public class Transaction {
     private String calculateHash() {
         // Increase the sequence to avoid 2 identical transactions having the same hash
         sequence++;
-        return StringUtils.sha256(
-                StringUtils.getStringFromKey(sender) +
-                        StringUtils.getStringFromKey(recipient) +
+        return StringUtil.sha256(
+                StringUtil.getStringFromKey(sender) +
+                        StringUtil.getStringFromKey(recipient) +
                         Float.toString(value) + sequence
         );
     }
