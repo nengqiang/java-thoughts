@@ -5,9 +5,10 @@
  
 ### popular-tech module
  * Contains the latest, latest and hottest technologies
-   * blockchain   
+   * Blockchain   
    See [blockchain](https://baike.baidu.com/item/区块链)
-   * java date new api: The new date api of JDK8
+   * Java date new api: The new date api of JDK8
+   * Common tools
  
 ### design-patterns module
  * When writing code, there will always be a lot of if...else, or case. If you include more than 
@@ -894,9 +895,58 @@
  * UML Class picture:    
  ![Image text](images/mementoMode.jpg) 
  
-
-
-
+ ---
+ 
+ **Observer Pattern(观察者模式)**
+ * When there is a one-to-many relationship between objects, the Observer Pattern is used. For example, when an object 
+ is modified, it will automatically notify its dependent object. The observer mode is a behavioral mode.  
+ (当对象间存在一对多关系时，则使用观察者模式。比如，当一个对象被修改时，则会自动通知它的依赖对象。观察者模式属于行为型模式。)
+ * Intent: Defines a one-to-many dependency between objects. When an object's state changes, all objects that depend on 
+ it are notified and automatically updated.  
+ (意图：定义对象间的一种一对多的依赖关系，当一个对象的状态发生改变时，所有依赖于它的对象都得到通知并被自动更新。)
+ * The main solution is: an object state change to notify other objects, and to take into account ease of use and low 
+ coupling, to ensure a high degree of collaboration.  
+ (主要解决：一个对象状态改变给其他对象通知的问题，而且要考虑到易用和低耦合，保证高度的协作。)
+ * When to use: The state of an object (target object) changes, and all dependent objects (observer objects) will be 
+ notified and broadcasted.  
+ (何时使用：一个对象（目标对象）的状态发生改变，所有的依赖对象（观察者对象）都将得到通知，进行广播通知。)
+ * How to solve: Using object-oriented technology, this dependency can be weakened.  
+ (如何解决：使用面向对象技术，可以将这种依赖关系弱化。)
+ * Key code: There is an ArrayList in the abstract class that holds the observers.  
+ (关键代码：在抽象类里有一个 ArrayList 存放观察者们。)
+ * Application examples: 1. At the time of auction, the auctioneer observes the highest price, and then informs other 
+ bidders to bid. 2. In the Journey to the West, Goku asked Bodhisattva to surrender the red baby. The Buddha sprinkled 
+ a water to recruit an old turtle. This turtle is an observer. He observes the action of Bodhisattva sprinkling.  
+ (应用实例： 1、拍卖的时候，拍卖师观察最高标价，然后通知给其他竞价者竞价。 2、西游记里面悟空请求菩萨降服红孩儿，菩萨洒了一地水招来
+ 一个老乌龟，这个乌龟就是观察者，他观察菩萨洒水这个动作。)
+ * Advantages: 1. The observer and the observed person are abstractly coupled. 2. Establish a trigger mechanism  
+ (优点： 1、观察者和被观察者是抽象耦合的。 2、建立一套触发机制)
+ * Disadvantages: 1. If an observer object has many direct and indirect observers, it will take a lot of time to notify 
+ all observers. 2. If there is a circular dependency between the observer and the observed target, the observation 
+ target will trigger a circular call between them, which may cause the system to crash. 3. Observer mode There is no 
+ corresponding mechanism for the observer to know how the observed target object has changed, but only to know that the 
+ observation target has changed.  
+ (缺点： 1、如果一个被观察者对象有很多的直接和间接的观察者的话，将所有的观察者都通知到会花费很多时间。 2、如果在观察者和观察目标之间
+ 有循环依赖的话，观察目标会触发它们之间进行循环调用，可能导致系统崩溃。 3、观察者模式没有相应的机制让观察者知道所观察的目标对象是
+ 怎么发生变化的，而仅仅只是知道观察目标发生了变化。)
+ * scenes to be used:
+   * An abstract model has two aspects, one of which depends on the other. These aspects are encapsulated in separate 
+   objects so that they can be changed and reused independently of each other.
+   * An object change will cause other one or more objects to change as well, without knowing how many objects will 
+   change, which can reduce the degree of coupling between objects.
+   * An object must notify other objects without knowing who they are.
+   * Need to create a trigger chain in the system, the behavior of the A object will affect the B object, the behavior 
+   of the B object will affect the C object..., you can use the observer mode to create a chain trigger mechanism.  
+ (使用场景：
+   一个抽象模型有两个方面，其中一个方面依赖于另一个方面。将这些方面封装在独立的对象中使它们可以各自独立地改变和复用。
+   一个对象的改变将导致其他一个或多个对象也发生改变，而不知道具体有多少对象将发生改变，可以降低对象之间的耦合度。
+   一个对象必须通知其他对象，而并不知道这些对象是谁。
+   需要在系统中创建一个触发链，A对象的行为将影响B对象，B对象的行为将影响C对象……，可以使用观察者模式创建一种链式触发机制。)
+ * Note: 1. There is already a support class for observer mode in JAVA. 2. Avoid circular references. 3. If the order is 
+ executed, an observer error will cause the system to jam, generally in an asynchronous manner.  
+ (注意事项： 1、JAVA 中已经有了对观察者模式的支持类。 2、避免循环引用。 3、如果顺序执行，某一观察者错误会导致系统卡壳，一般采用异步方式。)
+ * UML Class picture:    
+ ![Image text](images/observerMode.jpg) 
 
 
 
