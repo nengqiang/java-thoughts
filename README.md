@@ -1005,5 +1005,20 @@
  * UML Class picture:    
  ![Image text](images/stateMode.png) 
 
+ ---
+ 
+ **Null Object Pattern(空对象模式)**
+ * In the Null Object Pattern, an empty object replaces the check of a NULL object instance. Null objects do not 
+ check for null values, but instead react to a relationship that does nothing. Such Null objects can also provide 
+ default behavior when data is not available.
+   In the empty object pattern, we create an abstract class that specifies the various operations to be performed and 
+ an entity class that extends the class. We also create an empty object class that does not implement any implementation 
+ of the class. The empty object class will seamlessly Use where you need to check for null values.  
+ (在空对象模式中，一个空对象取代 NULL 对象实例的检查。Null 对象不是检查空值，而是反应一个不做任何动作的关系。这样的 Null 对象也可以在
+ 数据不可用的时候提供默认的行为。
+  在空对象模式中，我们创建一个指定各种要执行的操作的抽象类和扩展该类的实体类，还创建一个未对该类做任何实现的空对象类，该空对象类将无缝地
+ 使用在需要检查空值的地方。)
+ * UML Class picture:    
+ ![Image text](images/nullMode.jpg)
 
 

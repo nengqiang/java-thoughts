@@ -1,6 +1,6 @@
 package com.hnq.study.factory.factory;
 
-import com.hnq.study.factory.service.Shape;
+import com.hnq.study.factory.service.IShape;
 import com.hnq.study.factory.service.impl.Circle;
 import com.hnq.study.factory.service.impl.Rectangle;
 import com.hnq.study.factory.service.impl.Square;
@@ -24,7 +24,7 @@ public class ShapeFactory {
      * @param shapeType 形状类型
      * @return          形状类型的对象
      */
-    public Shape getShape(String shapeType) {
+    public IShape getShape(String shapeType) {
         if (shapeType == null || "".equals(shapeType)) {
             return null;
         }

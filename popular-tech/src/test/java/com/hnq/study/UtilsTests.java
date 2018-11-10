@@ -1,6 +1,10 @@
 package com.hnq.study;
 
+import com.hnq.study.bean.ObjectFields;
 import com.hnq.study.utils.BeanUtil;
+import com.hnq.study.utils.ReflectUtil;
+
+import java.util.List;
 
 /**
  * @author henengqiang
@@ -9,7 +13,7 @@ import com.hnq.study.utils.BeanUtil;
 public class UtilsTests {
 
     public static void main(String[] args) {
-        new UtilsTests().beanUtilTest1();
+        new UtilsTests().reflectUtilTest1();
     }
 
     private void beanUtilTest1() {
@@ -19,6 +23,16 @@ public class UtilsTests {
         System.out.println("Person2: " + person2);
         BeanUtil.copyProperties(person1, person2);
         System.out.println("Person2 after copy: " + person2);
+    }
+
+    private void reflectUtilTest1() {
+        Person person = new Person("alice", 25);
+        try {
+            List<ObjectFields> objectFieldsList = ReflectUtil.reflectToGetFields(person);
+            objectFieldsList.forEach(System.out::println);
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        }
     }
 
     class Person {

@@ -1,7 +1,10 @@
 package com.hnq.study.factory;
 
 import com.hnq.study.factory.factory.ShapeFactory;
-import com.hnq.study.factory.service.Shape;
+import com.hnq.study.factory.service.IShape;
+
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * @author henengqiang
@@ -12,34 +15,20 @@ public class FactoryPatternDemo {
     public static void main(String[] args) {
 
         ShapeFactory shapeFactory = new ShapeFactory();
-        Shape shape1 = shapeFactory.getShape("circle");
-        Shape shape2 = shapeFactory.getShape("rectangle");
-        Shape shape3 = shapeFactory.getShape("square");
-        Shape shape4 = shapeFactory.getShape("");
+        IShape shape1 = shapeFactory.getShape("circle");
+        IShape shape2 = shapeFactory.getShape("rectangle");
+        IShape shape3 = shapeFactory.getShape("square");
+        IShape shape4 = shapeFactory.getShape("");
 
-        if (shape1 != null) {
-            shape1.draw();
-        } else {
-            noShape();
-        }
+        List<IShape> shapes = Arrays.asList(shape1, shape2, shape3, shape4);
 
-        if (shape2 != null) {
-            shape2.draw();
-        } else {
-            noShape();
-        }
-
-        if (shape3 != null) {
-            shape3.draw();
-        } else {
-            noShape();
-        }
-
-        if (shape4 != null) {
-            shape4.draw();
-        } else {
-            noShape();
-        }
+        shapes.forEach(shape -> {
+            if (shape != null) {
+                shape.draw();
+            } else {
+                noShape();
+            }
+        });
 
     }
 
