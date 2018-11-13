@@ -9,6 +9,7 @@ import java.io.FileFilter;
 import java.lang.annotation.Annotation;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * @author henengqiang
@@ -83,7 +84,7 @@ public class CalPriceFactory {
      */
     @SuppressWarnings("unchecked")
     private void init() {
-        calPriceList = new ArrayList<Class<? extends ICalPrice>>();
+        calPriceList = new ArrayList<>();
         // 获取到包下的所有class文件
         File[] resources = getResources();
         Class<ICalPrice> calPriceClazz;
@@ -114,13 +115,11 @@ public class CalPriceFactory {
      */
     private File[] getResources() {
         try {
-            File file = new File(classLoader.getResource(CAL_PRICE_PACKAGE.replace(".", "/")).toURI());
-            return file.listFiles(new FileFilter() {
-                @Override
-                public boolean accept(File pathname) {
-                    // 只扫描 .class 文件
-                    return pathname.getName().endsWith(".class");
-                }
+            File file = new File(Objects.requireNonNull(
+                    classLoader.getResource(CAL_PRICE_PACKAGE.replace(".", "/"))).toURI());
+            return file.listFiles(pathname -> {
+                // 只扫描 .class 文件
+                return pathname.getName().endsWith(".class");
             });
         } catch (Exception e) {
             throw new RuntimeException("未找到策略资源");

@@ -17,7 +17,7 @@
  
  --- 
  
- **Strategy mode**
+ **Strategy mode(策略模式)**
  * The strategy pattern defines a set of algorithms and encapsulates each algorithm so that they can be 
  replaced with each other, allowing the algorithm to change independently of the client using it.
  * Analysis of the definition, the strategy pattern defines and encapsulates a series of algorithms, 
@@ -36,6 +36,42 @@
    * Abstract strategy: This is an abstract role, usually implemented by an interface or abstract class. 
  This role gives the interfaces required for all specific policy classes.  
    * ConcreteStrategy role: Wraps related algorithms or behaviors. 
+ 
+ * In the Strategy Pattern, the behavior of a class or its algorithm can be changed at runtime. This type of 
+ design pattern is a behavioral pattern.  
+   In strategy mode, we create objects that represent various policies and a context object whose behavior changes as 
+ the policy object changes. The policy object changes the execution algorithm of the context object.  
+ (在策略模式中，一个类的行为或其算法可以在运行时更改。这种类型的设计模式属于行为型模式。  
+  在策略模式中，我们创建表示各种策略的对象和一个行为随着策略对象改变而改变的 context 对象。策略对象改变 context 对象的执行算法。)
+ * Intent: Define a series of algorithms, wrap them one by one, and make them interchangeable.  
+ (意图：定义一系列的算法,把它们一个个封装起来, 并且使它们可相互替换。)
+ * The main solution: the use of if...else is complicated and difficult to maintain in the case of multiple algorithms.  
+ (主要解决：在有多种算法相似的情况下，使用 if...else 所带来的复杂和难以维护。)
+ * When to use: A system has many, many classes, and what distinguishes them is their direct behavior.  
+ (何时使用：一个系统有许多许多类，而区分它们的只是他们直接的行为。)
+ * How to solve: Encapsulate these algorithms into one class and replace them arbitrarily.  
+ (如何解决：将这些算法封装成一个一个的类，任意地替换。) 
+ * Key code: Implement the same interface.  
+ (关键代码：实现同一个接口。)
+ * Application examples: 1. Zhuge Liang's tips, each kit is a strategy. 2. the way of travel, choose to ride a bicycle, 
+ take a car, each type of travel is a strategy. 3. LayoutManager in JAVA AWT.  
+ (应用实例： 1、诸葛亮的锦囊妙计，每一个锦囊就是一个策略。 2、旅行的出游方式，选择骑自行车、坐汽车，每一种旅行方式都是一个策略。 
+ 3、JAVA AWT 中的 LayoutManager。)
+ * Advantages: 1. The algorithm can be switched freely. 2. Avoid using multiple conditional judgments. 3. Good scalability.  
+ (优点： 1、算法可以自由切换。 2、避免使用多重条件判断。 3、扩展性良好。)
+ * Disadvantages: 1. The strategy class will increase. 2. All strategy classes need to be exposed.  
+ (缺点： 1、策略类会增多。 2、所有策略类都需要对外暴露。)
+ * Usage scenarios: 1. If there are many classes in a system, the only difference between them is their behavior, then 
+ using the policy pattern can dynamically let an object choose a behavior in many behaviors. 2. A system needs to 
+ dynamically select one of several algorithms. 3. If an object has a lot of behavior, if you don't use the proper mode, 
+ these behaviors have to be implemented using multiple conditional selection statements.  
+ (使用场景： 1、如果在一个系统里面有许多类，它们之间的区别仅在于它们的行为，那么使用策略模式可以动态地让一个对象在许多行为中选择一种行为。 
+ 2、一个系统需要动态地在几种算法中选择一种。 3、如果一个对象有很多的行为，如果不用恰当的模式，这些行为就只好使用多重的条件选择语句来实现。)
+ * Note: If a system has more than four strategies, you need to consider using a mixed mode to solve the problem of 
+ policy class expansion.  
+ (注意事项：如果一个系统的策略多于四个，就需要考虑使用混合模式，解决策略类膨胀的问题。)
+ * UML Class picture:  
+ ![Image text](images/strategyMode.jpg)   
  
  ---
  
