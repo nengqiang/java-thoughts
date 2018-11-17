@@ -1057,4 +1057,72 @@
  * UML Class picture:    
  ![Image text](images/nullMode.jpg)
 
+ ---
+ 
+ **Template Pattern（模板模式）**
+ * In the Template Pattern, an abstract class exposes the way/template that implements its methods. Its subclasses can 
+ override method implementations as needed, but the calls will be made in the way defined in the abstract class. This 
+ type of design pattern is a behavioral model.  
+ (在模板模式中，一个抽象类公开定义了执行它的方法的方式/模板。它的子类可以按需要重写方法实现，但调用将以抽象类中定义的方式进行。
+ 这种类型的设计模式属于行为型模式。)
+ * Intent: Define the skeleton of an algorithm in an operation and delay some steps into subclasses. The template method 
+ allows subclasses to redefine certain steps of the algorithm without changing the structure of an algorithm.  
+ (意图：定义一个操作中的算法的骨架，而将一些步骤延迟到子类中。模板方法使得子类可以不改变一个算法的结构即可重定义该算法的某些特定步骤。)
+ * The main solution: some methods are common, but this method is rewritten in every subclass.  
+ (主要解决：一些方法通用，却在每一个子类都重新写了这一方法。)
+ * When to use: There are some general methods.  
+ (何时使用：有一些通用的方法。)
+ * How to solve: abstract these general algorithms.  
+ (如何解决：将这些通用算法抽象出来。)
+ * Key code: Implemented in an abstract class, and other steps are implemented in a subclass.  
+ (关键代码：在抽象类实现，其他步骤在子类实现。)
+ * Application examples: 1. When building a house, the foundation, the wiring, and the water pipes are the same. Only 
+ in the later stage of the building, there are differences such as adding a closet and a fence. 2. the Bodhisattva in 
+ the Journey to the West is set to 81 difficult, this is a top-level logical skeleton. 3. Spring support for Hibernate, 
+ some of the methods have been packaged, such as open the transaction, get the Session, close the Session, etc., the 
+ programmer does not repeat the code that has been standardized, directly lose an entity can be saved.  
+ (应用实例： 1、在造房子的时候，地基、走线、水管都一样，只有在建筑的后期才有加壁橱加栅栏等差异。 2、西游记里面菩萨定好的 81 难，
+ 这就是一个顶层的逻辑骨架。 3、spring 中对 Hibernate 的支持，将一些已经定好的方法封装起来，比如开启事务、获取 Session、关闭 
+ Session 等，程序员不重复写那些已经规范好的代码，直接丢一个实体就可以保存。)
+ * Advantages: 1. Encapsulate the invariant part and expand the variable part. 2. Extract common code for easy 
+ maintenance. 3. The behavior is controlled by the parent class and the child class is implemented.  
+ (优点： 1、封装不变部分，扩展可变部分。 2、提取公共代码，便于维护。 3、行为由父类控制，子类实现。)
+ * Disadvantages: Each different implementation requires a subclass to implement, resulting in an increase in the 
+ number of classes, making the system even larger.  
+ (缺点：每一个不同的实现都需要一个子类来实现，导致类的个数增加，使得系统更加庞大。)
+ * Usage scenarios: 1. There are multiple methods shared by subclasses, and the logic is the same. 2. Important and 
+ complex methods can be considered as template methods.  
+ (使用场景： 1、有多个子类共有的方法，且逻辑相同。 2、重要的、复杂的方法，可以考虑作为模板方法。)
+ * Note: In order to prevent malicious operations, the general template method is added with the final keyword.  
+ (注意事项：为防止恶意操作，一般模板方法都加上 final 关键词。)
+ * UML Class picture:    
+ ![Image text](images/templateMode.jpg)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
