@@ -1098,6 +1098,45 @@
  * UML Class picture:    
  ![Image text](images/templateMode.jpg)
 
+ ---
+ 
+ **Visitor Pattern(访问者模式)**
+ * In the visitor pattern, we use a visitor class that changes the execution algorithm of the element class. 
+ In this way, the element's execution algorithm can change as the visitor changes. This type of design pattern is a 
+ behavioral pattern. Depending on the schema, the element object has accepted the visitor object so that the visitor 
+ object can handle the operations on the element object.  
+ (在访问者模式中，我们使用了一个访问者类，它改变了元素类的执行算法。通过这种方式，元素的执行算法可以随着访问者改变而改变。这种类型的
+ 设计模式属于行为型模式。根据模式，元素对象已接受访问者对象，这样访问者对象就可以处理元素对象上的操作。)
+ * Intent: Mainly separate the data structure from the data operation.  
+ (意图：主要将数据结构与数据操作分离。)
+ * The main solution: stable data structure and variable operational coupling problems.  
+ (主要解决：稳定的数据结构和易变的操作耦合问题。)
+ * When to use: You need to do a lot of different and unrelated operations on objects in an object structure, but you 
+ need to avoid having these operations "contaminate" the classes of those objects and use the visitor pattern to wrap 
+ them into classes.  
+ (何时使用：需要对一个对象结构中的对象进行很多不同的并且不相关的操作，而需要避免让这些操作"污染"这些对象的类，使用访问者模式将这些封装到类中。)
+ * How to solve: Add an interface to the visited class to provide external visitors.  
+ (如何解决：在被访问的类里面加一个对外提供接待访问者的接口。)
+ * Key code: There is a method in the data foundation class that accepts the visitor and passes its own reference to the visitor.  
+ (关键代码：在数据基础类里面有一个方法接受访问者，将自身引用传入访问者。)
+ * Application example: You are a guest at a friend's house, you are a visitor, a friend accepts your visit, 
+ you make a judgment by a friend's description, this is the visitor mode.  
+ * Advantages: 1. Compliance with the principle of single responsibility. 2. excellent scalability. 3. Flexibility.  
+ (优点： 1、符合单一职责原则。 2、优秀的扩展性。 3、灵活性。)
+ * Disadvantages: 1. The specific elements disclose details to the visitor and violate the Dimit principle. 2. It is 
+ difficult to change specific elements. 3. Violation of the principle of dependency inversion, dependence on concrete 
+ classes, no dependence on abstraction.  
+ (缺点： 1、具体元素对访问者公布细节，违反了迪米特原则。 2、具体元素变更比较困难。 3、违反了依赖倒置原则，依赖了具体类，没有依赖抽象。)
+ * Usage scenarios: 1. The classes corresponding to objects in the object structure rarely change, but it is often 
+ necessary to define new operations on this object structure. 2. There are many different and unrelated operations that 
+ need to be done on objects in an object structure. You need to avoid having these operations "contaminate" the classes 
+ of these objects, and you don't want to modify them when adding new operations.  
+ (使用场景： 1、对象结构中对象对应的类很少改变，但经常需要在此对象结构上定义新的操作。 2、需要对一个对象结构中的对象进行很多不同的并且
+ 不相关的操作，而需要避免让这些操作"污染"这些对象的类，也不希望在增加新操作时修改这些类。)
+ * Note: Visitors can unify functions and can do reports, UIs, interceptors and filters.  
+ (注意事项：访问者可以对功能进行统一，可以做报表、UI、拦截器与过滤器。)
+ * UML Class picture:    
+ ![Image text](images/visitorMode.jpg)
 
 
 

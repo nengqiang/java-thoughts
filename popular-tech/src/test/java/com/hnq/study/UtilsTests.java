@@ -13,7 +13,11 @@ import java.util.List;
 public class UtilsTests {
 
     public static void main(String[] args) {
-        new UtilsTests().reflectUtilTest1();
+        UtilsTests utilsTests = new UtilsTests();
+        utilsTests.beanUtilTest1();
+        // 打印分割线
+        printDividingLine();
+        utilsTests.reflectUtilTest1();
     }
 
     private void beanUtilTest1() {
@@ -66,6 +70,22 @@ public class UtilsTests {
         public void setAge(Integer age) {
             this.age = age;
         }
+    }
+
+    /**
+     * 打印分割线
+     */
+    private static void printDividingLine() {
+        int lineSize = 100;
+        System.out.println();
+        for (int i = 0; i < lineSize; i++) {
+            if (i == lineSize - 1) {
+                System.out.println("-");
+            } else {
+                System.out.print("-");
+            }
+        }
+        System.out.println();
     }
 
 }
