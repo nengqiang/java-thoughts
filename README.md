@@ -14,6 +14,21 @@
  * When writing code, there will always be a lot of if...else, or case. If you include more than 
  one conditional statement in a conditional statement, the code will become bloated, the cost of maintenance will increase, 
  and the strategy mode will solve this problem better.    
+ * There are five principles and one rule in the object-oriented design pattern.SOLID principles and DP rules.  
+ (在面向对象设计模式中存在的是五大原则和一个法则。SOLID原则和DP法则。)
+    * SRP(Single Responsibilities Principle)  
+    (单一职责)
+    * OCP(Open Close Principle): Enable hot swap and improve scalability.  
+    (开闭原则：实现热插拔，提高扩展性。)
+    * LSK(Liskov Substitution Principle): Implement an abstract specification that implements sub-parent replacement.  
+    (里氏代换：实现抽象的规范，实现子父类互相替换。)
+    * ISP(Interface Segregation Principle): Reduce the coupling degree, the interfaces are designed separately and 
+    isolated from each other.  
+    (接口隔离：降低耦合度，接口单独设计，互相隔离。)
+    * DIP(Dependence Inversion Principle): For interface programming, the basis for the principle of opening and closing.  
+    (倒转依赖：针对接口编程，实现开闭原则的基础。)  
+    * rule: DP (Demeter Principle) Also said that do not know the principle: the function module is as independent as possible.  
+    (迪米特法则，又称不知道原则：功能模块尽量独立。)
  
  --- 
  
@@ -1176,10 +1191,26 @@
  * UML Class Picture:  
  ![Image text](images/businessMode.png)
 
-
-
-
-
+ ---
+ 
+ **Composite Entity Pattern(组合实体模式)**
+ * The composite entity pattern is used in the EJB persistence mechanism. A composite entity is an EJB entity bean that 
+ represents an illustration of an object. When a composite entity is updated, the internal dependent object beans are 
+ automatically updated because they are managed by the EJB entity bean. The following are participants of a composite entity bean.  
+ (组合实体模式用在 EJB 持久化机制中。一个组合实体是一个 EJB 实体 bean，代表了对象的图解。当更新一个组合实体时，内部依赖对象 beans 
+ 会自动更新，因为它们是由 EJB 实体 bean 管理的。以下是组合实体 bean 的参与者。)
+     * Composite Entity - This is the main entity bean. It can be coarse-grained or it can contain a coarse-grained object 
+     for a continuous lifecycle.  
+     (组合实体 - 它是主要的实体 bean。它可以是粗粒的，或者可以包含一个粗粒度对象，用于持续生命周期。)
+     * Coarse-grained object - This object contains dependent objects. It has its own life cycle and can manage the 
+     lifecycle of dependent objects.  
+     (粗粒度对象 - 该对象包含依赖对象。它有自己的生命周期，也能管理依赖对象的生命周期。)
+     * Dependent Objects - A dependent object is an object whose persistence lifecycle depends on a coarse-grained object.  
+     (依赖对象 - 依赖对象是一个持续生命周期依赖于粗粒度对象的对象。)
+     * Policy - The policy indicates how the composite entity is implemented.  
+     (策略 - 策略表示如何实现组合实体。)
+ * UML Class Picture:  
+ ![Image text](images/compositeentityMode.jpg)
 
 
 
