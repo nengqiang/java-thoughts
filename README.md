@@ -1212,9 +1212,22 @@
  * UML Class Picture:  
  ![Image text](images/compositeentityMode.jpg)
 
-
-
-
+ ---
+ 
+ **Data Access Object Pattern(数据访问对象模式)**
+ * The Data Access Object Pattern or DAO pattern is used to separate low-level data access APIs or operations from 
+ advanced business services. The following are participants of the data access object model.  
+ (数据访问对象模式或 DAO 模式用于把低级的数据访问 API 或操作从高级的业务服务中分离出来。以下是数据访问对象模式的参与者。)
+    * Data Access Object Interface - This interface defines the standard operations to be performed on a model object.   
+    (数据访问对象接口 - 该接口定义了在一个模型对象上要执行的标准操作。)
+    * Data Access Object Entity Class - This class implements the above interface. This class is responsible for getting 
+    data from a data source, which can be a database, xml, or other storage mechanism.  
+    (数据访问对象实体类 - 该类实现了上述的接口。该类负责从数据源获取数据，数据源可以是数据库，也可以是 xml，或者是其他的存储机制。)
+    * Model Object / Numeric Object - This object is a simple POJO that contains a get/set method to store the data 
+    retrieved by using the DAO class.  
+    (模型对象/数值对象  - 该对象是简单的 POJO，包含了 get/set 方法来存储通过使用 DAO 类检索到的数据。)
+ * UML Class Picture:  
+ ![Image text](images/daoMode.jpg)
 
 
 
