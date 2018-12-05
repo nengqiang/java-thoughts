@@ -1228,7 +1228,24 @@
     (模型对象/数值对象  - 该对象是简单的 POJO，包含了 get/set 方法来存储通过使用 DAO 类检索到的数据。)
  * UML Class Picture:  
  ![Image text](images/daoMode.jpg)
-
+ 
+ ---
+ 
+ **Front Controller Pattern(前端控制器模式)**
+ * The front controller mode is used to provide a centralized request processing mechanism, and all requests are 
+ processed by a single handler. The handler can do the authentication/authorization/logging, or track the request, and 
+ then pass the request to the appropriate handler. The following are the entities of this design pattern.  
+ (前端控制器模式是用来提供一个集中的请求处理机制，所有的请求都将由一个单一的处理程序处理。该处理程序可以做认证/授权/记录日志，
+ 或者跟踪请求，然后把请求传给相应的处理程序。以下是这种设计模式的实体。)
+    * Front Controller - A single handler that handles all types of application requests. The application can be either 
+    a web-based application or a desktop-based application.  
+    (前端控制器 - 处理应用程序所有类型请求的单个处理程序，应用程序可以是基于 web 的应用程序，也可以是基于桌面的应用程序。)
+    * Scheduler - The front controller may use a scheduler object to dispatch requests to the appropriate handler.  
+    (调度器 - 前端控制器可能使用一个调度器对象来调度请求到相应的具体处理程序。)
+    * View - A view is an object created for a request.  
+    (视图 - 视图是为请求而创建的对象。)
+ * UML Class Picture:  
+ ![Image text](images/frontcontrollerMode.jpg)
 
 
 
