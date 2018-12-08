@@ -1247,9 +1247,27 @@
  * UML Class Picture:  
  ![Image text](images/frontcontrollerMode.jpg)
 
-
-
-
+ ---
+ 
+ **Intercepting Filter Pattern(拦截过滤器模式)**
+ * The intercept filter mode is used to do some pre-/post-processing of the application's request or response. Define 
+ the filter and apply it to the request before passing it to the actual target application. The filter can do 
+ authentication/authorization/logging, or track the request, and then pass the request to the appropriate handler. 
+ The following are the entities of this design pattern.  
+ (拦截过滤器模式用于对应用程序的请求或响应做一些预处理/后处理。定义过滤器，并在把请求传给实际目标应用程序之前应用在请求上。
+ 过滤器可以做认证/授权/记录日志，或者跟踪请求，然后把请求传给相应的处理程序。以下是这种设计模式的实体。)
+    * Filter - The filter performs certain tasks before or after the request handler executes the request.  
+    (过滤器 - 过滤器在请求处理程序执行请求之前或之后，执行某些任务。)
+    * Filter Chain - The filter chain has multiple filters and executes them on the Target in the defined order.  
+    (过滤器链 - 过滤器链带有多个过滤器，并在 Target 上按照定义的顺序执行这些过滤器。)
+    * The Target - Target object is the request handler.  
+    (Target - Target 对象是请求处理程序。)
+    * Filter Manager - Filter Manager manages filters and filter chains.  
+    (过滤管理器 - 过滤管理器管理过滤器和过滤器链。)
+    * Client - Client is the object that sends the request to the Target object.  
+    (客户端 - Client 是向 Target 对象发送请求的对象。)
+ * UML Class Picture:  
+ ![Image text](images/interceptingfilterMode.jpg)
 
 
 
