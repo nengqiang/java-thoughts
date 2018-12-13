@@ -1269,9 +1269,30 @@
  * UML Class Picture:  
  ![Image text](images/interceptingfilterMode.jpg)
 
+ ---
+ 
+ **Service Locator Pattern(服务定位器模式)**
+ * The service locator pattern is used when we want to use JNDI queries to locate various services. Considering the high 
+ cost of finding JNDI for a service, the Service Locator pattern takes advantage of caching technology. When a service 
+ is first requested, the service locator looks up the service in JNDI and caches the service object. When the same 
+ service is requested again, the service locator looks in its cache, which can greatly improve the performance of the 
+ application. The following are the entities of this design pattern.  
+ (服务定位器模式用在我们想使用 JNDI 查询定位各种服务的时候。考虑到为某个服务查找 JNDI 的代价很高，服务定位器模式充分利用了缓存技术。
+ 在首次请求某个服务时，服务定位器在 JNDI 中查找服务，并缓存该服务对象。当再次请求相同的服务时，服务定位器会在它的缓存中查找，
+ 这样可以在很大程度上提高应用程序的性能。以下是这种设计模式的实体。)
+    * Service - The service that actually handles the request. A reference to this service can be found in the JNDI server.  
+    (服务 - 实际处理请求的服务。对这种服务的引用可以在 JNDI 服务器中查找到。)
+    * Context / Initial Context - The JNDI Context has a reference to the service you are looking for.  
+    (Context / 初始的 Context - JNDI Context 带有对要查找的服务的引用。)
+    * Service Locator - The Service Locator is a single point of contact for services through the JNDI lookup and caching service.  
+    (服务定位器 - 服务定位器是通过 JNDI 查找和缓存服务来获取服务的单点接触。)
+    * Cache - A reference to the cache storage service to reuse them.  
+    (缓存 - 缓存存储服务的引用，以便复用它们。)
+    * Client - Client is the object that invokes the service through ServiceLocator.  
+    (客户端 - Client 是通过 ServiceLocator 调用服务的对象。)
 
-
-
+ * UML Class Picture:  
+ ![Image text](images/servicelocatorMode.jpg)
 
 
 
