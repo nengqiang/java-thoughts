@@ -29,68 +29,49 @@
     (倒转依赖：针对接口编程，实现开闭原则的基础。)  
     * rule: DP (Demeter Principle) Also said that do not know the principle: the function module is as independent as possible.  
     (迪米特法则，又称不知道原则：功能模块尽量独立。)
- 
- --- 
- 
- **Strategy mode(策略模式)**
- * The strategy pattern defines a set of algorithms and encapsulates each algorithm so that they can be 
- replaced with each other, allowing the algorithm to change independently of the client using it.
- * Analysis of the definition, the strategy pattern defines and encapsulates a series of algorithms, 
- they can be replaced, that is, they have commonality, and their commonality is reflected in the behavior of the 
- policy interface, and in order to achieve the purpose of the last sentence That is, letting the algorithm 
- change independently of the client that uses it, we need to make the client depend on the policy interface.
- * The usage situation of the strategy mode:  
-   * 1.A variety of treatments for the same type of problem, only when there are differences in specific behaviors;  
-   * 2.Need to safely package multiple operations of the same type;  
-   * 3.When the same abstract class has multiple subclasses, you need to use if-else or switch-case 
- to select a specific subclass.  
- * UML Class picture:  
- ![Image text](images/strategyMode.png)  
- * This pattern involves three roles:  
-   * Context role: Hold a reference to a Strategy.  
-   * Abstract strategy: This is an abstract role, usually implemented by an interface or abstract class. 
- This role gives the interfaces required for all specific policy classes.  
-   * ConcreteStrategy role: Wraps related algorithms or behaviors. 
- 
- * In the Strategy Pattern, the behavior of a class or its algorithm can be changed at runtime. This type of 
- design pattern is a behavioral pattern.  
-   In strategy mode, we create objects that represent various policies and a context object whose behavior changes as 
- the policy object changes. The policy object changes the execution algorithm of the context object.  
- (在策略模式中，一个类的行为或其算法可以在运行时更改。这种类型的设计模式属于行为型模式。  
-  在策略模式中，我们创建表示各种策略的对象和一个行为随着策略对象改变而改变的 context 对象。策略对象改变 context 对象的执行算法。)
- * Intent: Define a series of algorithms, wrap them one by one, and make them interchangeable.  
- (意图：定义一系列的算法,把它们一个个封装起来, 并且使它们可相互替换。)
- * The main solution: the use of if...else is complicated and difficult to maintain in the case of multiple algorithms.  
- (主要解决：在有多种算法相似的情况下，使用 if...else 所带来的复杂和难以维护。)
- * When to use: A system has many, many classes, and what distinguishes them is their direct behavior.  
- (何时使用：一个系统有许多许多类，而区分它们的只是他们直接的行为。)
- * How to solve: Encapsulate these algorithms into one class and replace them arbitrarily.  
- (如何解决：将这些算法封装成一个一个的类，任意地替换。) 
- * Key code: Implement the same interface.  
- (关键代码：实现同一个接口。)
- * Application examples: 1. Zhuge Liang's tips, each kit is a strategy. 2. the way of travel, choose to ride a bicycle, 
- take a car, each type of travel is a strategy. 3. LayoutManager in JAVA AWT.  
- (应用实例： 1、诸葛亮的锦囊妙计，每一个锦囊就是一个策略。 2、旅行的出游方式，选择骑自行车、坐汽车，每一种旅行方式都是一个策略。 
- 3、JAVA AWT 中的 LayoutManager。)
- * Advantages: 1. The algorithm can be switched freely. 2. Avoid using multiple conditional judgments. 3. Good scalability.  
- (优点： 1、算法可以自由切换。 2、避免使用多重条件判断。 3、扩展性良好。)
- * Disadvantages: 1. The strategy class will increase. 2. All strategy classes need to be exposed.  
- (缺点： 1、策略类会增多。 2、所有策略类都需要对外暴露。)
- * Usage scenarios: 1. If there are many classes in a system, the only difference between them is their behavior, then 
- using the policy pattern can dynamically let an object choose a behavior in many behaviors. 2. A system needs to 
- dynamically select one of several algorithms. 3. If an object has a lot of behavior, if you don't use the proper mode, 
- these behaviors have to be implemented using multiple conditional selection statements.  
- (使用场景： 1、如果在一个系统里面有许多类，它们之间的区别仅在于它们的行为，那么使用策略模式可以动态地让一个对象在许多行为中选择一种行为。 
- 2、一个系统需要动态地在几种算法中选择一种。 3、如果一个对象有很多的行为，如果不用恰当的模式，这些行为就只好使用多重的条件选择语句来实现。)
- * Note: If a system has more than four strategies, you need to consider using a mixed mode to solve the problem of 
- policy class expansion.  
- (注意事项：如果一个系统的策略多于四个，就需要考虑使用混合模式，解决策略类膨胀的问题。)
- * UML Class picture:  
- ![Image text](images/strategyMode.jpg)   
+    
+ * **Content**
+    * Created Pattern
+        * <a href = "#1">Factory Pattern</a>
+        * <a href = "#2">Abstract Factory Pattern</a>
+        * <a href = "#3">Single Pattern</a>
+        * <a href = "#4">Builder Pattern</a>
+        * <a href = "#5">Prototype Pattern</a>
+    * Structural Pattern
+        * <a href = "#6">Adapter Pattern</a> 
+        * <a href = "#7">Bridge Pattern</a> 
+        * <a href = "#8">Filter Pattern</a> 
+        * <a href = "#9">Composite Pattern</a> 
+        * <a href = "#10">Decorator Pattern</a> 
+        * <a href = "#11">Facade Pattern</a> 
+        * <a href = "#12">Flyweight Pattern</a> 
+        * <a href = "#13">Proxy Pattern</a> 
+    * Behavioral Pattern
+        * <a href = "#14">Chain of Responsibility Pattern</a>
+        * <a href = "#15">Command Pattern</a>
+        * <a href = "#16">Interpreter Pattern</a>
+        * <a href = "#17">Iterator Pattern</a>
+        * <a href = "#18">Mediator Pattern</a>
+        * <a href = "#19">Memento Pattern</a>
+        * <a href = "#20">Observer Pattern</a>
+        * <a href = "#21">State Pattern</a>
+        * <a href = "#22">Null Object Pattern</a>
+        * <a href = "#23">Strategy Pattern</a>
+        * <a href = "#24">Template Pattern</a>
+        * <a href = "#25">Visitor Pattern</a>
+    * J2EE Pattern
+        * <a href = "#26">MVC Pattern</a>
+        * <a href = "#27">Business Delegate Pattern</a>
+        * <a href = "#28">Composite Entity Pattern</a>
+        * <a href = "#29">Data Access Object Pattern</a>
+        * <a href = "#30">Front Controller Pattern</a>
+        * <a href = "#31">Intercepting Filter Pattern</a>
+        * <a href = "#32">Service Locator Pattern</a>
+        * <a href = "#33">Transfer Pattern</a>
  
  ---
  
- **Factory mode（工厂模式）**
+ **<a name="1">Factory Pattern（工厂模式）</a>**
  * Intent: Define an interface to create an object, let its subclasses decide which factory class to instantiate, 
  and the factory mode delays the creation process to subclasses.  
  （意图：定义一个创建对象的接口，让其子类自己决定实例化哪一个工厂类，工厂模式使其创建过程延迟到子类进行。）
@@ -130,7 +111,7 @@
   
  ---
   
- **Abstract Factory Pattern(抽象工厂模式)**
+ **<a name="2">Abstract Factory Pattern(抽象工厂模式)</a>**
  * The Abstract Factory Pattern creates other factories around a super factory. This super factory is also known as the 
  factory of other factories. This type of design pattern is a creative model that provides the best way to create objects.  
  In abstract factory mode, an interface is a factory that is responsible for creating a related object, without explicitly 
@@ -177,7 +158,7 @@
  
  ---
  
- **Singleton Pattern(单例模式)**
+ **<a name="3">Singleton Pattern(单例模式)</a>**
  * The Singleton Pattern is one of the simplest design patterns in Java. This type of design pattern is a creative model 
  that provides the best way to create objects.  
  This pattern involves a single class that is responsible for creating your own objects while ensuring that only a 
@@ -229,7 +210,7 @@
  
  ---
  
- **Builder Pattern**(建造者模式)
+ **<a name="4">Builder Pattern(建造者模式)</a>**
  * The Builder Pattern uses a number of simple objects to build a complex object step by step. This type of design 
  pattern is a creative model that provides the best way to create objects.  
  A Builder class will construct the final object step by step. The Builder class is independent of other objects.  
@@ -268,7 +249,7 @@
 
 ---
 
- **Prototype Pattern(原型模式)**
+ **<a name="5">Prototype Pattern(原型模式)</a>**
  * The Prototype Pattern is used to create duplicate objects while maintaining performance. This type of design pattern 
  is a creative model that provides the best way to create objects.  
  This pattern implements a prototype interface that is used to create clones of the current object. This mode is used 
@@ -331,7 +312,7 @@
 
 ---
 
-**Adapter Pattern(适配器模式)**
+**<a name="6">Adapter Pattern(适配器模式)</a>**
  * The Adapter Pattern is a bridge between two incompatible interfaces. This type of design pattern is a structured 
  model that combines the functionality of two separate interfaces.  
  This pattern involves a single class that is responsible for adding independent or incompatible interface functions. As 
@@ -390,7 +371,7 @@
  
  ---
  
- **Bridge Pattern(桥接模式)**
+ **<a name="7">Bridge Pattern(桥接模式)</a>**
  * Bridge is used to decouple abstraction and implementation so that the two can change independently. This type of 
  design pattern is a structured pattern that provides decoupling between the two by providing a bridge between the 
  abstraction and the implementation.  
@@ -443,7 +424,7 @@
 
  ---
 
- **Filter Pattern(过滤器模式)**
+ **<a name="8">Filter Pattern(过滤器模式)</a>**
  * Filter Pattern or Criteria Pattern is a design pattern that allows developers to filter a set of objects using 
  different criteria and connect them by decoupling through logical operations. This type of design pattern is a 
  structured model that combines multiple standards to achieve a single standard.  
@@ -453,7 +434,8 @@
   ![Image text](images/filterMode.jpg) 
   
  ---
- **Composite Pattern(组合模式)**
+ 
+ **<a name="9">Composite Pattern(组合模式)</a>**
  * Composite Pattern, also known as partial ensemble, is used to treat a group of similar objects as a single object. 
  The combination mode combines objects according to a tree structure to represent parts and the overall hierarchy. 
  This type of design pattern is a structured pattern that creates a tree structure of object groups.  
@@ -500,7 +482,7 @@
  
  ---
  
- **Decorator Pattern(装饰器模式)**
+ **<a name="10">Decorator Pattern(装饰器模式)</a>**
  * The Decorator Pattern allows you to add new functionality to an existing object without changing its structure. 
  This type of design pattern is a structured pattern that is a wrapper around an existing class.  
  This pattern creates a decorating class that wraps the original class and provides additional functionality while 
@@ -546,7 +528,7 @@
  
  ---
  
- **Facade Pattern(外观模式)**
+ **<a name="11">Facade Pattern(外观模式)</a>**
  * The Facade Pattern hides the complexity of the system and provides the client with an interface that the client can 
  access the system. This type of design pattern is a structured pattern that adds an interface to an existing system to 
  hide the complexity of the system.  
@@ -589,7 +571,7 @@
  
  ---
  
- **Flyweight Pattern(享元模式)**
+ **<a name="12">Flyweight Pattern(享元模式)</a>**
  * The Flyweight Pattern is mainly used to reduce the number of created objects to reduce memory usage and improve 
  performance. This type of design pattern is a structured pattern that provides a way to reduce the number of objects 
  and improve the structure of the objects needed for the application.  
@@ -635,7 +617,7 @@
  
  ---
  
- **Proxy Pattern(代理模式)**
+ **<a name="13">Proxy Pattern(代理模式)</a>**
  * In the Proxy Pattern, a class represents the functionality of another class. This type of design pattern is a 
  structured pattern.  
  In proxy mode, we create objects with existing objects to provide functional interfaces to the outside world.  
@@ -686,7 +668,7 @@
  
  ---
  
- **Chain of Responsibility Pattern(责任链模式)**
+ **<a name="14">Chain of Responsibility Pattern(责任链模式)</a>**
  * As the name implies, the Chain of Responsibility Pattern creates a chain of recipient objects for the request. This 
  mode gives the type of request and decouples the sender and receiver of the request. This type of design pattern is a 
  behavioral model.  
@@ -738,7 +720,7 @@
  
  ---
  
- **Command Pattern(命令模式)**
+ **<a name="15">Command Pattern(命令模式)</a>**
  * The Command Pattern is a data-driven design pattern that is a behavioral pattern. The request is wrapped in an object 
  in the form of a command and passed to the calling object. The calling object looks for a suitable object that can 
  handle the command and passes the command to the corresponding object, which executes the command.  
@@ -781,7 +763,7 @@
  
  ---
  
- **Interpreter Pattern(解释器模式)**
+ **<a name="16">Interpreter Pattern(解释器模式)</a>**
  * The Interpreter Pattern provides a way to evaluate the syntax or expression of a language, which is a behavioral 
  pattern. This pattern implements an expression interface that interprets a particular context. This mode is used in SQL 
  parsing, symbol processing engines, and more.  
@@ -821,7 +803,7 @@
  
  ---
  
- **Iterator Pattern(迭代器模式)**
+ **<a name="17">Iterator Pattern(迭代器模式)</a>**
  * The Iterator Pattern is a very common design pattern in Java and .Net programming environments. This pattern is used 
  to sequentially access the elements of the collection object without knowing the underlying representation of the 
  collection object.  
@@ -866,7 +848,7 @@
  
  ---
  
- **Mediator Pattern(中介者模式)**
+ **<a name="18">Mediator Pattern(中介者模式)</a>**
  * The Mediator Pattern is used to reduce the communication complexity between multiple objects and classes. This 
  pattern provides a mediation class that typically handles communication between different classes and supports loose 
  coupling to make the code easy to maintain. The mediator mode is a behavioral mode.    
@@ -908,7 +890,7 @@
   
  ---
  
- **Memento Pattern(备忘录模式)**
+ **<a name="19">Memento Pattern(备忘录模式)</a>**
  * The Memento Pattern saves a state of an object to restore the object when appropriate. The memo mode is a behavioral 
  mode.  
  (备忘录模式（Memento Pattern）保存一个对象的某个状态，以便在适当的时候恢复对象。备忘录模式属于行为型模式。)
@@ -948,7 +930,7 @@
  
  ---
  
- **Observer Pattern(观察者模式)**
+ **<a name="20">Observer Pattern(观察者模式)</a>**
  * When there is a one-to-many relationship between objects, the Observer Pattern is used. For example, when an object 
  is modified, it will automatically notify its dependent object. The observer mode is a behavioral mode.  
  (当对象间存在一对多关系时，则使用观察者模式。比如，当一个对象被修改时，则会自动通知它的依赖对象。观察者模式属于行为型模式。)
@@ -1001,7 +983,7 @@
 
  ---
 
- **State Pattern(状态模式)**
+ **<a name="21">State Pattern(状态模式)</a>**
  * In the State Pattern, the behavior of a class is changed based on its state. This type of design pattern is a 
  behavioral model.
    In state mode, we create objects that represent various states and a context object whose behavior changes as the 
@@ -1058,7 +1040,7 @@
 
  ---
  
- **Null Object Pattern(空对象模式)**
+ **<a name="22">Null Object Pattern(空对象模式)</a>**
  * In the Null Object Pattern, an empty object replaces the check of a NULL object instance. Null objects do not 
  check for null values, but instead react to a relationship that does nothing. Such Null objects can also provide 
  default behavior when data is not available.
@@ -1072,9 +1054,67 @@
  * UML Class picture:    
  ![Image text](images/nullMode.jpg)
 
+ --- 
+ 
+ **<a name="23">Strategy Pattern(策略模式)</a>**
+ * The strategy pattern defines a set of algorithms and encapsulates each algorithm so that they can be 
+ replaced with each other, allowing the algorithm to change independently of the client using it.
+ * Analysis of the definition, the strategy pattern defines and encapsulates a series of algorithms, 
+ they can be replaced, that is, they have commonality, and their commonality is reflected in the behavior of the 
+ policy interface, and in order to achieve the purpose of the last sentence That is, letting the algorithm 
+ change independently of the client that uses it, we need to make the client depend on the policy interface.
+ * The usage situation of the strategy mode:  
+   * 1.A variety of treatments for the same type of problem, only when there are differences in specific behaviors;  
+   * 2.Need to safely package multiple operations of the same type;  
+   * 3.When the same abstract class has multiple subclasses, you need to use if-else or switch-case 
+ to select a specific subclass.  
+ * UML Class picture:  
+ ![Image text](images/strategyMode.png)  
+ * This pattern involves three roles:  
+   * Context role: Hold a reference to a Strategy.  
+   * Abstract strategy: This is an abstract role, usually implemented by an interface or abstract class. 
+ This role gives the interfaces required for all specific policy classes.  
+   * ConcreteStrategy role: Wraps related algorithms or behaviors. 
+ 
+ * In the Strategy Pattern, the behavior of a class or its algorithm can be changed at runtime. This type of 
+ design pattern is a behavioral pattern.  
+   In strategy mode, we create objects that represent various policies and a context object whose behavior changes as 
+ the policy object changes. The policy object changes the execution algorithm of the context object.  
+ (在策略模式中，一个类的行为或其算法可以在运行时更改。这种类型的设计模式属于行为型模式。  
+  在策略模式中，我们创建表示各种策略的对象和一个行为随着策略对象改变而改变的 context 对象。策略对象改变 context 对象的执行算法。)
+ * Intent: Define a series of algorithms, wrap them one by one, and make them interchangeable.  
+ (意图：定义一系列的算法,把它们一个个封装起来, 并且使它们可相互替换。)
+ * The main solution: the use of if...else is complicated and difficult to maintain in the case of multiple algorithms.  
+ (主要解决：在有多种算法相似的情况下，使用 if...else 所带来的复杂和难以维护。)
+ * When to use: A system has many, many classes, and what distinguishes them is their direct behavior.  
+ (何时使用：一个系统有许多许多类，而区分它们的只是他们直接的行为。)
+ * How to solve: Encapsulate these algorithms into one class and replace them arbitrarily.  
+ (如何解决：将这些算法封装成一个一个的类，任意地替换。) 
+ * Key code: Implement the same interface.  
+ (关键代码：实现同一个接口。)
+ * Application examples: 1. Zhuge Liang's tips, each kit is a strategy. 2. the way of travel, choose to ride a bicycle, 
+ take a car, each type of travel is a strategy. 3. LayoutManager in JAVA AWT.  
+ (应用实例： 1、诸葛亮的锦囊妙计，每一个锦囊就是一个策略。 2、旅行的出游方式，选择骑自行车、坐汽车，每一种旅行方式都是一个策略。 
+ 3、JAVA AWT 中的 LayoutManager。)
+ * Advantages: 1. The algorithm can be switched freely. 2. Avoid using multiple conditional judgments. 3. Good scalability.  
+ (优点： 1、算法可以自由切换。 2、避免使用多重条件判断。 3、扩展性良好。)
+ * Disadvantages: 1. The strategy class will increase. 2. All strategy classes need to be exposed.  
+ (缺点： 1、策略类会增多。 2、所有策略类都需要对外暴露。)
+ * Usage scenarios: 1. If there are many classes in a system, the only difference between them is their behavior, then 
+ using the policy pattern can dynamically let an object choose a behavior in many behaviors. 2. A system needs to 
+ dynamically select one of several algorithms. 3. If an object has a lot of behavior, if you don't use the proper mode, 
+ these behaviors have to be implemented using multiple conditional selection statements.  
+ (使用场景： 1、如果在一个系统里面有许多类，它们之间的区别仅在于它们的行为，那么使用策略模式可以动态地让一个对象在许多行为中选择一种行为。 
+ 2、一个系统需要动态地在几种算法中选择一种。 3、如果一个对象有很多的行为，如果不用恰当的模式，这些行为就只好使用多重的条件选择语句来实现。)
+ * Note: If a system has more than four strategies, you need to consider using a mixed mode to solve the problem of 
+ policy class expansion.  
+ (注意事项：如果一个系统的策略多于四个，就需要考虑使用混合模式，解决策略类膨胀的问题。)
+ * UML Class picture:  
+ ![Image text](images/strategyMode.jpg)   
+
  ---
  
- **Template Pattern（模板模式）**
+ **<a name="24">Template Pattern（模板模式）</a>**
  * In the Template Pattern, an abstract class exposes the way/template that implements its methods. Its subclasses can 
  override method implementations as needed, but the calls will be made in the way defined in the abstract class. This 
  type of design pattern is a behavioral model.  
@@ -1115,7 +1155,7 @@
 
  ---
  
- **Visitor Pattern(访问者模式)**
+ **<a name="25">Visitor Pattern(访问者模式)</a>**
  * In the visitor pattern, we use a visitor class that changes the execution algorithm of the element class. 
  In this way, the element's execution algorithm can change as the visitor changes. This type of design pattern is a 
  behavioral pattern. Depending on the schema, the element object has accepted the visitor object so that the visitor 
@@ -1155,7 +1195,7 @@
 
  ---
  
- **MVC Pattern**
+ **<a name="26">MVC Pattern</a>**
  * The MVC mode represents the Model-View-Controller mode. This mode is used for layered development of applications.  
  (MVC 模式代表 Model-View-Controller（模型-视图-控制器） 模式。这种模式用于应用程序的分层开发。)
     * Model - The model represents an object that accesses data or a JAVA POJO. It can also be logical to update the 
@@ -1173,7 +1213,7 @@
 
  ---
  
- **Business Delegate Pattern(业务代表模式)**
+ **<a name="27>Business Delegate Pattern(业务代表模式)</a>**
  * The Business Delegate Pattern is used to decouple the presentation layer from the business layer. It is basically 
  used to reduce communication or remote query capabilities for business layer code in presentation layer code. In the 
  business layer we have the following entities.  
@@ -1193,7 +1233,7 @@
 
  ---
  
- **Composite Entity Pattern(组合实体模式)**
+ **<a name="28">Composite Entity Pattern(组合实体模式)</a>**
  * The composite entity pattern is used in the EJB persistence mechanism. A composite entity is an EJB entity bean that 
  represents an illustration of an object. When a composite entity is updated, the internal dependent object beans are 
  automatically updated because they are managed by the EJB entity bean. The following are participants of a composite entity bean.  
@@ -1214,7 +1254,7 @@
 
  ---
  
- **Data Access Object Pattern(数据访问对象模式)**
+ **<a name="29">Data Access Object Pattern(数据访问对象模式)</a>**
  * The Data Access Object Pattern or DAO pattern is used to separate low-level data access APIs or operations from 
  advanced business services. The following are participants of the data access object model.  
  (数据访问对象模式或 DAO 模式用于把低级的数据访问 API 或操作从高级的业务服务中分离出来。以下是数据访问对象模式的参与者。)
@@ -1231,7 +1271,7 @@
  
  ---
  
- **Front Controller Pattern(前端控制器模式)**
+ **<a name="30">Front Controller Pattern(前端控制器模式)</a>**
  * The front controller mode is used to provide a centralized request processing mechanism, and all requests are 
  processed by a single handler. The handler can do the authentication/authorization/logging, or track the request, and 
  then pass the request to the appropriate handler. The following are the entities of this design pattern.  
@@ -1249,7 +1289,7 @@
 
  ---
  
- **Intercepting Filter Pattern(拦截过滤器模式)**
+ **<a name="31">Intercepting Filter Pattern(拦截过滤器模式)</a>**
  * The intercept filter mode is used to do some pre-/post-processing of the application's request or response. Define 
  the filter and apply it to the request before passing it to the actual target application. The filter can do 
  authentication/authorization/logging, or track the request, and then pass the request to the appropriate handler. 
@@ -1271,7 +1311,7 @@
 
  ---
  
- **Service Locator Pattern(服务定位器模式)**
+ **<a name="32">Service Locator Pattern(服务定位器模式)</a>**
  * The service locator pattern is used when we want to use JNDI queries to locate various services. Considering the high 
  cost of finding JNDI for a service, the Service Locator pattern takes advantage of caching technology. When a service 
  is first requested, the service locator looks up the service in JNDI and caches the service object. When the same 
@@ -1290,11 +1330,29 @@
     (缓存 - 缓存存储服务的引用，以便复用它们。)
     * Client - Client is the object that invokes the service through ServiceLocator.  
     (客户端 - Client 是通过 ServiceLocator 调用服务的对象。)
-
  * UML Class Picture:  
  ![Image text](images/servicelocatorMode.jpg)
 
-
-
+ ---
+ 
+ **<a name="33">Transfer Object Pattern(传输对象模式)</a>**
+ * The transport object mode is used to pass data with multiple attributes from the client to the server at one time. 
+ Transfer objects are also called numeric objects. The transport object is a simple POJO class with a getter/setter 
+ method that is serializable so it can be transmitted over the network. It does not have any behavior. The server-side 
+ business class typically reads data from the database, populates the POJO, and sends it to the client or passes it by 
+ value. For the client, the transport object is read-only. The client can create its own transport object and pass it to 
+ the server to update the values in the database at once. The following are the entities of this design pattern.  
+ (传输对象模式用于从客户端向服务器一次性传递带有多个属性的数据。传输对象也被称为数值对象。传输对象是一个具有 getter/setter 方法的简单的
+  POJO 类，它是可序列化的，所以它可以通过网络传输。它没有任何的行为。服务器端的业务类通常从数据库读取数据，然后填充 POJO，并把它发送到
+  客户端或按值传递它。对于客户端，传输对象是只读的。客户端可以创建自己的传输对象，并把它传递给服务器，以便一次性更新数据库中的数值。
+  以下是这种设计模式的实体。)
+    * Business Object - A business service that populates data for transport objects.  
+    (业务对象 - 为传输对象填充数据的业务服务。)
+    * Transfer Objects - Simple POJOs, only methods for setting/getting properties.  
+    (传输对象 - 简单的 POJO，只有设置/获取属性的方法。)
+    * Client - The client can send a request or send a transport object to a business object.  
+    (客户端 - 客户端可以发送请求或者发送传输对象到业务对象。)
+ * UML Class Picture:  
+ ![Image text](images/transferobjectMode.jpg)
 
 
