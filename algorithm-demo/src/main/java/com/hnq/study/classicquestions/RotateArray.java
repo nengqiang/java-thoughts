@@ -28,7 +28,7 @@ public class RotateArray {
     }
 
     /**
-     * Solution a - Intermediate Array
+     * Solution 1 - Intermediate Array
      * In a straight forward way, we can create a new array and then copy elements to the new array.
      * Then change original array by using {@link System#arraycopy}.
      *
