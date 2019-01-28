@@ -43,8 +43,8 @@ public class RotateArray {
 
         int[] result = new int[nums.length];
 
-        for (int i = 0; i < k; i++) {
-            result[i] = nums[nums.length - k + i];
+        if (k >= 0) {
+            System.arraycopy(nums, nums.length - k, result, 0, k);
         }
 
         int j = 0;
