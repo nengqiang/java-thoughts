@@ -9,6 +9,10 @@
    See [blockchain](https://baike.baidu.com/item/区块链)
    * Java date new api: The new date api of JDK8
    * Common tools
+   
+### algorithm-demo module
+  * Common algorithms and data structures for interviews: strings, linked lists, trees, graphs, sorts, recursive vs. 
+  iterations, dynamic programming, bit operations, probabilistic problems, permutations, and some topics that require regularity.        
  
 ### design-patterns module
  * When writing code, there will always be a lot of if...else, or case. If you include more than 

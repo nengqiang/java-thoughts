@@ -17,7 +17,7 @@ public class PalindromicSubstring {
         System.out.println("Original String: " + s);
         String palindrome1 = longestPalindrome1(s);
         System.out.println("Longest palindromic substring of s by method 1: " + palindrome1);
-        String palindrome2 = longestPalindrome1(s);
+        String palindrome2 = longestPalindrome2(s);
         System.out.println("Longest palindromic substring of s by method 2: " + palindrome2);
     }
 
