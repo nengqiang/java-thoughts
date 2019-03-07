@@ -3,9 +3,12 @@ package com.hnq.study.classicquestions;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
 
-import static com.hnq.study.classicquestions.ThreeSum.generatePositiveOrNegativeRandomNumbersWithBound;
+import static com.hnq.study.utils.GenerateMethods.generatePositiveOrNegativeRandomNumbersWithBound;
 
 /**
  * Given an array S of n integers, find three integers in S such that the sum is closet to a given number, target.

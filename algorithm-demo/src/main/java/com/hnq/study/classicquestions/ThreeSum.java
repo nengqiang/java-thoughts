@@ -4,7 +4,8 @@ import com.google.common.collect.Lists;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.Random;
+
+import static com.hnq.study.utils.GenerateMethods.generatePositiveOrNegativeRandomNumbersWithBound;
 
 /**
  * Problem:
@@ -83,17 +84,6 @@ public class ThreeSum {
                     }
                 }
             }
-        }
-        return result;
-    }
-
-    // ---------------------------------------------------------------
-
-    static int[] generatePositiveOrNegativeRandomNumbersWithBound(int size, int bound) {
-        int[] result = new int[size];
-        Random r = new Random();
-        for (int i = 0; i < size; i++) {
-            result[i] = bound - r.nextInt(bound * 2);
         }
         return result;
     }

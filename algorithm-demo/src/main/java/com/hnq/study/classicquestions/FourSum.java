@@ -5,7 +5,7 @@ import com.google.common.collect.Lists;
 import java.util.Arrays;
 import java.util.List;
 
-import static com.hnq.study.classicquestions.ThreeSum.generatePositiveOrNegativeRandomNumbersWithBound;
+import static com.hnq.study.utils.GenerateMethods.generatePositiveOrNegativeRandomNumbersWithBound;
 
 /**
  * Problem:
