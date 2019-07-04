@@ -1,4 +1,4 @@
-package com.hnq.study.utils;
+package com.hnq.study.util;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;

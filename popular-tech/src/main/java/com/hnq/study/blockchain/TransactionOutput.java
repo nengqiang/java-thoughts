@@ -1,6 +1,6 @@
 package com.hnq.study.blockchain;
 
-import com.hnq.study.utils.StringUtil;
+import com.hnq.study.util.StrUtils;
 
 import java.security.PublicKey;
 
@@ -31,7 +31,7 @@ public class TransactionOutput {
         this.recipient = recipient;
         this.value = value;
         this.parentTransactionId = parentTransactionId;
-        this.id = StringUtil.sha256(StringUtil.getStringFromKey(recipient) + Float.toString(value) + parentTransactionId);
+        this.id = StrUtils.sha256(StrUtils.getStringFromKey(recipient) + Float.toString(value) + parentTransactionId);
     }
 
     /**

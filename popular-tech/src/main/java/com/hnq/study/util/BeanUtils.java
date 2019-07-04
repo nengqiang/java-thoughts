@@ -1,4 +1,4 @@
-package com.hnq.study.utils;
+package com.hnq.study.util;
 
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
@@ -19,7 +19,7 @@ import java.util.concurrent.ConcurrentHashMap;
  * @author henengqiang
  * @date 2018/11/1
  */
-public class BeanUtil {
+public class BeanUtils {
 
     private static final Map<String, BeanCopier> BEAN_COPIER_MAP = new ConcurrentHashMap<>();
 

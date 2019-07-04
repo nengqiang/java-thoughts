@@ -8,7 +8,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
-import static com.hnq.study.utils.GenerateMethods.generatePositiveOrNegativeRandomNumbersWithBound;
+import static com.hnq.study.utils.GenUtils.genArrWithPositiveOrNegative;
 
 /**
  * Given an array S of n integers, find three integers in S such that the sum is closet to a given number, target.
@@ -26,7 +26,7 @@ public class ThreeSumClosest {
         int size = 6;
         int bound = 5;
         int target = 0;
-        int[] param = generatePositiveOrNegativeRandomNumbersWithBound(size, bound);
+        int[] param = genArrWithPositiveOrNegative(size, bound);
         Map<Integer, List<Integer>> result = threeSumClosest(param, target);
         System.out.println("The original array: " + Arrays.toString(param));
         System.out.println("The solution set: " + result);

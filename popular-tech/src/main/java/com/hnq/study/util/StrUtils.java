@@ -1,4 +1,4 @@
-package com.hnq.study.utils;
+package com.hnq.study.util;
 
 import java.nio.charset.StandardCharsets;
 import java.security.Key;
@@ -9,7 +9,7 @@ import java.util.Base64;
  * @author henengqiang
  * @date 2018/8/22
  */
-public class StringUtil {
+public class StrUtils {
 
     /**
      * SHA256算法加密（生成电子签名）

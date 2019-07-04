@@ -1,7 +1,7 @@
 package com.hnq.study.classicquestions;
 
 import com.google.common.collect.Sets;
-import com.hnq.study.utils.GenerateMethods;
+import com.hnq.study.utils.GenUtils;
 
 import java.util.Arrays;
 import java.util.Set;
@@ -20,7 +20,7 @@ import java.util.Set;
 public class LongestConsecutiveSequence {
 
     public static void main(String[] args) {
-        int[] nums = GenerateMethods.generateUnDuplicatedRandomNumbersWithBound(10, 50);
+        int[] nums = GenUtils.genNotRepeatingArr(10, 50);
         System.out.println(getLongestConsecutive(nums));
         Arrays.sort(nums);
         System.out.println(Arrays.toString(nums));

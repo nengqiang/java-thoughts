@@ -5,7 +5,7 @@ import com.google.common.collect.Lists;
 import java.util.Arrays;
 import java.util.List;
 
-import static com.hnq.study.utils.GenerateMethods.generatePositiveOrNegativeRandomNumbersWithBound;
+import static com.hnq.study.utils.GenUtils.genArrWithPositiveOrNegative;
 
 /**
  * Problem:
@@ -29,7 +29,7 @@ public class ThreeSum {
     public static void main(String[] args) {
         int size = 6;
         int bound = 5;
-        int[] param = generatePositiveOrNegativeRandomNumbersWithBound(size, bound);
+        int[] param = genArrWithPositiveOrNegative(size, bound);
         List<List<Integer>> result = threeSum(param);
         System.out.println("The original array: " + Arrays.toString(param));
         System.out.println("The solution set: " + result);

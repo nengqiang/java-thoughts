@@ -1,4 +1,4 @@
-package com.hnq.study.utils;
+package com.hnq.study.util;
 
 import com.google.common.collect.Lists;
 import com.hnq.study.bean.ObjectFields;
@@ -10,7 +10,7 @@ import java.util.List;
  * @author henengqiang
  * @date 2018/10/16
  */
-public class ReflectUtil {
+public class ReflectUtils {
 
     /**
      * 根据反射来遍历类的字段属性及其字段值等

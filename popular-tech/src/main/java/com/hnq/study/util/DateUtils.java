@@ -1,4 +1,4 @@
-package com.hnq.study.utils;
+package com.hnq.study.util;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -9,7 +9,7 @@ import java.util.Date;
  * @author henengqiang
  * @date 2018/8/25
  */
-public class DateUtil {
+public class DateUtils {
 
     /**
      * Calendar --> String
