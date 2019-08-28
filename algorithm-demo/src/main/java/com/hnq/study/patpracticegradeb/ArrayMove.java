@@ -26,10 +26,7 @@ public class ArrayMove {
         String s = sc.nextLine();
         int steps = Arrays.stream(s.split(" ")).map(Integer::parseInt).collect(Collectors.toList()).get(1);
         String[] nums = sc.nextLine().split(" ");
-        int[] arr = new int[nums.length];
-        for (int i = 0; i < nums.length; i++) {
-            arr[i] = Integer.parseInt(nums[i]);
-        }
+        int[] arr = Arrays.stream(nums).mapToInt(Integer::parseInt).toArray();
         moveArray(steps, arr);
         StringBuilder sb = new StringBuilder();
         Arrays.stream(arr).forEach(x -> sb.append(x).append(" "));

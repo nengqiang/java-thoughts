@@ -1,4 +1,5 @@
 package com.hnq.study.patpracticegradeb;
+import java.util.Arrays;
 import	java.util.regex.Pattern;
 
 import java.util.Scanner;
@@ -68,9 +69,7 @@ public class AnswerIsRight {
         for (int i = 0; i < n; i++) {
             words[i] = sc.nextLine();
         }
-        for (String word : words) {
-            System.out.println(pattern.matcher(word).matches() ? YES : NO);
-        }
+        Arrays.stream(words).forEach(word -> System.out.println(pattern.matcher(word).matches() ? YES : NO));
     }
 
 }

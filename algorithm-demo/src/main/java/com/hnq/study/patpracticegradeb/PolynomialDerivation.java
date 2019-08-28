@@ -1,5 +1,6 @@
 package com.hnq.study.patpracticegradeb;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 /**
@@ -29,10 +30,7 @@ public class PolynomialDerivation {
     private static void calIt() {
         String input = sc.nextLine();
         String[] data = input.split(" ");
-        int[] nums = new int[data.length];
-        for (int i = 0; i < data.length; i++) {
-            nums[i] = Integer.parseInt(data[i]);
-        }
+        int[] nums = Arrays.stream(data).mapToInt(Integer::parseInt).toArray();
         int[] result = calculateDerivation(nums);
         StringBuilder sb = new StringBuilder();
         for (int i : result) {
@@ -42,7 +40,7 @@ public class PolynomialDerivation {
     }
 
     /**
-     * // TODO: 2019/8/27 0027 题目还没大看懂
+     * // TODO: 2019/8/27 0027 部分正确 题目还没大看懂
      */
     private static int[] calculateDerivation(int[] data) {
         int[] result = new int[data.length];
