@@ -160,6 +160,10 @@
  * UML Class picture:  
  ![Image text](images/abstractFactoryMode.jpg)
  
+ Difference between factory pattern and abstract factory pattern:
+ * Factory pattern is used to create different type of one product.
+ * Abstract factory pattern is used to create different kinds of products.
+ 
  ---
  
  **<a name="3">Singleton Pattern(单例模式)</a>**

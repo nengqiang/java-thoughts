@@ -30,14 +30,15 @@ public class ColorFactory extends AbstractFactory {
         if (color == null) {
             return null;
         }
-        if (RED.equals(color)) {
-            return new Red();
-        } else if (GREEN.equals(color)) {
-            return new Green();
-        } else if (BLUE.equals(color)) {
-            return new Blue();
+        switch (color) {
+            case RED:
+                return new Red();
+            case GREEN:
+                return new Green();
+            case BLUE:
+                return new Blue();
+                default: return null;
         }
-        return null;
     }
 
     @Override

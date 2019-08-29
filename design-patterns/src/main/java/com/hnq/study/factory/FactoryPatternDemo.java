@@ -5,6 +5,7 @@ import com.hnq.study.factory.service.IShape;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * @author henengqiang
@@ -21,19 +22,8 @@ public class FactoryPatternDemo {
         IShape shape4 = shapeFactory.getShape("");
 
         List<IShape> shapes = Arrays.asList(shape1, shape2, shape3, shape4);
+        shapes.stream().filter(Objects::nonNull).forEach(IShape::draw);
 
-        shapes.forEach(shape -> {
-            if (shape != null) {
-                shape.draw();
-            } else {
-                noShape();
-            }
-        });
-
-    }
-
-    private static void noShape() {
-        System.out.println("没有这种形状");
     }
 
 }

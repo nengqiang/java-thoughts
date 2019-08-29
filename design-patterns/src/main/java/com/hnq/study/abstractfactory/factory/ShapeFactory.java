@@ -35,14 +35,15 @@ public class ShapeFactory extends AbstractFactory {
         if (shapeType == null || "".equals(shapeType)) {
             return null;
         }
-        if (CIRCLE.equals(shapeType)) {
-            return new Circle();
-        } else if (RECTANGLE.equals(shapeType)) {
-            return new Rectangle();
-        } else if (SQUARE.equals(shapeType)) {
-            return new Square();
+        switch (shapeType) {
+            case CIRCLE:
+                return new Circle();
+            case RECTANGLE:
+                return new Rectangle();
+            case SQUARE:
+                return new Square();
+                default: return null;
         }
-        return null;
     }
 
 }

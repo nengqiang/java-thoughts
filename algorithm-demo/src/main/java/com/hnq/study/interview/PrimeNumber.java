@@ -19,6 +19,8 @@ public class PrimeNumber {
         int count = 0;
         for (int i = start; i <= end; i++) {
             int temp = (int) Math.sqrt(Math.abs(i));
+            // 解决当根号i小于2时下面for循环跳过的情况，这是个bug
+            temp = temp > 2 ? temp : 2;
             for (int j = 2; j <= temp; j++) {
                 if (i % j == 0) {
                     break;

@@ -50,7 +50,7 @@ public class AnswerIsRight {
     private static Scanner sc = new Scanner(System.in);
 
     /**
-     * // TODO: 2019-08-22 henengqiang 有情况没考虑完全 
+     * // TODO: 2019-08-22 henengqiang 部分正确 有情况没考虑完全
      */
     private static Pattern pattern = Pattern.compile("[\\sA]*PA{1,2}T[A\\s]*");
 
