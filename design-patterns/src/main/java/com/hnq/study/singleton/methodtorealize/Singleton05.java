@@ -31,7 +31,7 @@ public class Singleton05 {
      * making a final declaration not very necessary. Declaring a static method final does prevent
      * subclasses from defining a static method with the same signature.
      */
-    public static final Singleton05 getInstance() {
+    static Singleton05 getInstance() {
         return SingletonHolder.INSTANCE;
     }
 
