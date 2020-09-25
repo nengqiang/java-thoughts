@@ -1,7 +1,7 @@
 package com.hnq.study.mediatorpattern.mediator;
 
 import com.hnq.study.mediatorpattern.bean.User;
-import com.hnq.study.util.DateUtils;
+import org.apache.commons.lang3.time.DateFormatUtils;
 
 import java.util.Date;
 
@@ -12,7 +12,7 @@ import java.util.Date;
 public class ChatRoom {
 
     public static void showMessage(User user, String message) {
-        String dateStr = DateUtils.dateToString(new Date(), "yyyy-MM-dd hh:mm:ss");
+        String dateStr = DateFormatUtils.format(new Date(), "yyyy-MM-dd hh:mm:ss");
         System.out.println(dateStr + " " + user + " said: " + message);
     }
 

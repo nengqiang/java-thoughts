@@ -1,9 +1,9 @@
-package com.hnq.study.decoratorpattern;
+package com.hnq.study.decoratorpattern.greenhanddemo;
 
-import com.hnq.study.decoratorpattern.service.IShape;
-import com.hnq.study.decoratorpattern.service.RedShapeDecorator;
-import com.hnq.study.decoratorpattern.service.impl.Circle;
-import com.hnq.study.decoratorpattern.service.impl.Rectangle;
+import com.hnq.study.decoratorpattern.greenhanddemo.service.IShape;
+import com.hnq.study.decoratorpattern.greenhanddemo.service.RedShapeDecorator;
+import com.hnq.study.decoratorpattern.greenhanddemo.service.impl.Circle;
+import com.hnq.study.decoratorpattern.greenhanddemo.service.impl.Rectangle;
 
 /**
  *  创建一个 IShape 接口和实现了 IShape 接口的实体类。然后我们创建一个实现了 IShape 接口的抽象装饰类 AbstractShapeDecorator，

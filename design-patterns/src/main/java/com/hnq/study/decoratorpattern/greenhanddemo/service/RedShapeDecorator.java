@@ -1,4 +1,4 @@
-package com.hnq.study.decoratorpattern.service;
+package com.hnq.study.decoratorpattern.greenhanddemo.service;
 
 /**
  * @author henengqiang

@@ -1,6 +1,6 @@
-package com.hnq.study.decoratorpattern.service.impl;
+package com.hnq.study.decoratorpattern.greenhanddemo.service.impl;
 
-import com.hnq.study.decoratorpattern.service.IShape;
+import com.hnq.study.decoratorpattern.greenhanddemo.service.IShape;
 
 /**
  * @author henengqiang
