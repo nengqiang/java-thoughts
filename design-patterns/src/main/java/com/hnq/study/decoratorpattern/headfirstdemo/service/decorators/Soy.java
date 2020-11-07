@@ -4,7 +4,7 @@ import com.hnq.study.decoratorpattern.headfirstdemo.service.Beverage;
 import com.hnq.study.decoratorpattern.headfirstdemo.service.CondimentDecorator;
 
 /**
- * 奶泡装饰
+ * 大豆装饰
  *
  * @author henengqiang
  * @date 2020/09/25
