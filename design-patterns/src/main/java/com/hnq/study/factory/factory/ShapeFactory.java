@@ -4,6 +4,7 @@ import com.hnq.study.factory.service.IShape;
 import com.hnq.study.factory.service.impl.Circle;
 import com.hnq.study.factory.service.impl.Rectangle;
 import com.hnq.study.factory.service.impl.Square;
+import org.apache.commons.lang3.StringUtils;
 
 /**
  * 创建一个工厂，生成基于给定信息的实体类的对象。
@@ -21,11 +22,12 @@ public class ShapeFactory {
 
     /**
      * 使用 getShape 方法获取形状类型的对象
+     *
      * @param shapeType 形状类型
      * @return          形状类型的对象
      */
     public IShape getShape(String shapeType) {
-        if (shapeType == null || "".equals(shapeType)) {
+        if (StringUtils.isEmpty(shapeType)) {
             return null;
         }
         switch (shapeType) {
