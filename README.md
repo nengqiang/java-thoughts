@@ -17,7 +17,35 @@
 ### design-patterns module
  * When writing code, there will always be a lot of if...else, or case. If you include more than 
  one conditional statement in a conditional statement, the code will become bloated, the cost of maintenance will increase, 
- and the strategy mode will solve this problem better.    
+ and the strategy mode will solve this problem better.
+ * 设计模式三大分类
+   * **创建型模式：** 对对象的实例化过程进行抽象，这使得一个系统不用关心这些对象是如何创建、组合和呈现的，对于类创建模式来说，
+ 通过使用继承改变实例化的类；对于对象创建模式来说，通过使用代理来实例化所需要的对象。共五种：
+     * 工厂方法模式
+     * 抽象工厂模式
+     * 单例模式
+     * 建造者模式
+     * 原型模式
+   * **结构型模式：** 通过对多个类和对象进行组合得到复杂结构的类，一般使用继承或者成员变量引用形式来实现。共七种：
+     * 适配器模式
+     * 装饰器模式
+     * 代理模式
+     * 外观模式
+     * 桥接模式
+     * 组合模式
+     * 享元模式
+   * **行为型模式：** 行为模式不仅表达了对象和类，还表达了他们之间的交互，涉及到了对象和算法的分配。共十一种：
+     * 策略模式
+     * 模板方法模式
+     * 观察者模式
+     * 迭代子模式
+     * 责任链模式
+     * 命令模式
+     * 备忘录模式
+     * 状态模式
+     * 访问者模式
+     * 中介者模式
+     * 解释器模式
  * There are five principles and one rule in the object-oriented design pattern.SOLID principles and DP rules.  
  (在面向对象设计模式中存在的是五大原则和一个法则。SOLID原则和DP法则。)
     * SRP(Single Responsibilities Principle)  
