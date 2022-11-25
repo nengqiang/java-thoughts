@@ -1,4 +1,4 @@
-package com.hnq.study.everyday.month202212;
+package com.hnq.study.everyday.month202211;
 
 /**
  * 颠倒给定的 32 位无符号整数的二进制位。
