@@ -1,4 +1,4 @@
-package com.hnq.study.everyday.month202302;
+package com.hnq.study.everyday.quarter202301;
 
 /**
  * 给定一个非负整数 num，反复将各个位上的数字相加，直到结果为一位数。返回这个结果。

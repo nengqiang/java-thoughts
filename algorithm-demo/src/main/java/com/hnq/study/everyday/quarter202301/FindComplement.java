@@ -1,4 +1,4 @@
-package com.hnq.study.everyday.month202302;
+package com.hnq.study.everyday.quarter202301;
 
 /**
  * 对整数的二进制表示取反（0 变 1 ，1 变 0）后，再转换为十进制表示，可以得到这个整数的补数。

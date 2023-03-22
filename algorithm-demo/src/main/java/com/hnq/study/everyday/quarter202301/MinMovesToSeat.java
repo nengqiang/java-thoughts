@@ -1,4 +1,4 @@
-package com.hnq.study.everyday.month202301;
+package com.hnq.study.everyday.quarter202301;
 
 import java.util.Arrays;
 

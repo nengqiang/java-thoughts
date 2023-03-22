@@ -1,4 +1,4 @@
-package com.hnq.study.everyday.month202301;
+package com.hnq.study.everyday.quarter202301;
 
 /**
  * 给定一个二叉树，找出其最大深度。
