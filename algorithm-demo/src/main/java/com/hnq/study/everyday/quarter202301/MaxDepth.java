@@ -1,5 +1,7 @@
 package com.hnq.study.everyday.quarter202301;
 
+import com.hnq.study.everyday.TreeNode;
+
 /**
  * 给定一个二叉树，找出其最大深度。
  * <p>
@@ -44,17 +46,6 @@ public class MaxDepth {
         return Math.max(lMax, rMax);
     }
 
-    static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-        TreeNode() {}
-        TreeNode(int val) { this.val = val; }
-        TreeNode(int val, TreeNode left, TreeNode right) {
-            this.val = val;
-            this.left = left;
-            this.right = right;
-        }
-    }
+    
 
 }

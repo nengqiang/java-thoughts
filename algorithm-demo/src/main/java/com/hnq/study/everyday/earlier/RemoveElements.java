@@ -1,7 +1,6 @@
 package com.hnq.study.everyday.earlier;
 
-import org.apache.commons.lang3.builder.ToStringBuilder;
-import org.apache.commons.lang3.builder.ToStringStyle;
+import com.hnq.study.everyday.ListNode;
 
 /**
  * 给你一个链表的头节点 head 和一个整数 val ，请你删除链表中所有满足 Node.val == val 的节点，并返回 新的头节点 。
@@ -45,22 +44,6 @@ public class RemoveElements {
         }
         head.next = removeElements(head.next, val);
         return head;
-    }
-
-    public static class ListNode {
-        int val;
-        ListNode next;
-        ListNode() {}
-        ListNode(int val) { this.val = val; }
-        ListNode(int val, ListNode next) { this.val = val; this.next = next; }
-
-        @Override
-        public String toString() {
-            return new ToStringBuilder(this, ToStringStyle.JSON_STYLE)
-                    .append("val", val)
-                    .append("next", next)
-                    .toString();
-        }
     }
 
 }

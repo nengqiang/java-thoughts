@@ -1,7 +1,6 @@
 package com.hnq.study.everyday.earlier;
 
-import org.apache.commons.lang3.builder.ToStringBuilder;
-import org.apache.commons.lang3.builder.ToStringStyle;
+import com.hnq.study.everyday.ListNode;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -111,21 +110,4 @@ public class DeleteDuplicates {
         return head;
     }
 
-    private static class ListNode {
-        int val;
-        ListNode next;
-        ListNode() {}
-        ListNode(int val) { this.val = val; }
-        ListNode(int val, ListNode next) {
-            this.val = val;
-            this.next = next;
-        }
-        @Override
-        public String toString() {
-            return new ToStringBuilder(this, ToStringStyle.JSON_STYLE)
-                    .append("val", val)
-                    .append("next", next)
-                    .toString();
-        }
-    }
 }

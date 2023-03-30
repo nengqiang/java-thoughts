@@ -1,6 +1,6 @@
 package com.hnq.study.everyday.quarter202301;
 
-import java.util.StringJoiner;
+import com.hnq.study.everyday.TreeNode;
 
 /**
  * 给定二叉树的根节点root，返回所有左叶子之和。
@@ -87,28 +87,6 @@ public class SumOfLeftLeaves {
             res += root.left.val;
         }
         return sumOfLeftLeaves(root.left) + sumOfLeftLeaves(root.right) + res;
-    }
-
-    static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-        TreeNode() {}
-        TreeNode(int val) { this.val = val; }
-        TreeNode(int val, TreeNode left, TreeNode right) {
-            this.val = val;
-            this.left = left;
-            this.right = right;
-        }
-
-        @Override
-        public String toString() {
-            return new StringJoiner(", ", "{", "}")
-                    .add("\"val\":" + val)
-                    .add("\"left\":" + left)
-                    .add("\"right\":" + right)
-                    .toString();
-        }
     }
 
 }

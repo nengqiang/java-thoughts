@@ -1,8 +1,9 @@
 package com.hnq.study.everyday.quarter202301;
 
+import com.hnq.study.everyday.TreeNode;
+
 import java.util.ArrayList;
 import java.util.List;
-import java.util.StringJoiner;
 
 /**
  * 给你一个二叉树的根节点 root ，按 任意顺序 ，返回所有从根节点到叶子节点的路径。
@@ -64,26 +65,4 @@ public class BinaryTreePaths {
         return res;
     }
 
-    static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-        TreeNode() {}
-        TreeNode(int val) { this.val = val; }
-        TreeNode(int val, TreeNode left, TreeNode right) {
-            this.val = val;
-            this.left = left;
-            this.right = right;
-        }
-
-        @Override
-        public String toString() {
-            return new StringJoiner(", ", "{", "}")
-                    .add("\"val\":" + val)
-                    .add("\"left\":" + left)
-                    .add("\"right\":" + right)
-                    .toString();
-        }
-    }
-    
 }

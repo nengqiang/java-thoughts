@@ -1,6 +1,6 @@
 package com.hnq.study.everyday.quarter202301;
 
-import java.util.StringJoiner;
+import com.hnq.study.everyday.TreeNode;
 
 /**
  * 给你一个整数数组 nums ，其中元素已经按 升序 排列，请你将其转换为一棵 高度平衡 二叉搜索树。
@@ -77,28 +77,6 @@ public class SortedArrayToBst {
         root.left = buildTree(nums, l, m - 1);
         root.right = buildTree(nums, m + 1, r);
         return root;
-    }
-
-    static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-        TreeNode() {}
-        TreeNode(int val) { this.val = val; }
-        TreeNode(int val, TreeNode left, TreeNode right) {
-            this.val = val;
-            this.left = left;
-            this.right = right;
-        }
-
-        @Override
-        public String toString() {
-            return new StringJoiner(", ", "{", "}")
-                    .add("\"val\":" + val)
-                    .add("\"left\":" + left)
-                    .add("\"right\":" + right)
-                    .toString();
-        }
     }
 
 }

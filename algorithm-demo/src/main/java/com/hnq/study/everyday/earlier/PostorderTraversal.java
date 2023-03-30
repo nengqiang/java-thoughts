@@ -1,5 +1,7 @@
 package com.hnq.study.everyday.earlier;
 
+import com.hnq.study.everyday.TreeNode;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -44,21 +46,6 @@ public class PostorderTraversal {
         postorder(root.left, list);
         postorder(root.right, list);
         list.add(root.val);
-    }
-
-    public static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-        TreeNode() {}
-        TreeNode(int val) {
-            this.val = val;
-        }
-        TreeNode(int val, TreeNode left, TreeNode right) {
-            this.val = val;
-            this.left = left;
-            this.right = right;
-        }
     }
 
 }

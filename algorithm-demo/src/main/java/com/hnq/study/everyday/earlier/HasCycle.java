@@ -1,5 +1,7 @@
 package com.hnq.study.everyday.earlier;
 
+import com.hnq.study.everyday.ListNode;
+
 /**
  * 给定一个链表，判断链表中是否有环。
  *
@@ -71,27 +73,4 @@ public class HasCycle {
         return true;
     }
 
-    /**
-     * Definition for singly-linked list.
-     * class ListNode {
-     *     int val;
-     *     ListNode next;
-     *     ListNode(int x) {
-     *         val = x;
-     *         next = null;
-     *     }
-     * }
-     */
-    public static class ListNode {
-        int val;
-        ListNode next;
-        ListNode(int x) {
-            val = x;
-            next = null;
-        }
-        ListNode(int x, ListNode n) {
-            val = x;
-            next = n;
-        }
-    }
 }

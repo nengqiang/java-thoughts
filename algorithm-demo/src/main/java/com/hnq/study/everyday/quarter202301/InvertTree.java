@@ -1,6 +1,6 @@
 package com.hnq.study.everyday.quarter202301;
 
-import java.util.StringJoiner;
+import com.hnq.study.everyday.TreeNode;
 
 /**
  * 给你一棵二叉树的根节点 root ，翻转这棵二叉树，并返回其根节点。
@@ -53,26 +53,4 @@ public class InvertTree {
         return root;
     }
 
-    static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-        TreeNode() {}
-        TreeNode(int val) { this.val = val; }
-        TreeNode(int val, TreeNode left, TreeNode right) {
-            this.val = val;
-            this.left = left;
-            this.right = right;
-        }
-
-        @Override
-        public String toString() {
-            return new StringJoiner(", ", "{", "}")
-                    .add("\"val\":" + val)
-                    .add("\"left\":" + left)
-                    .add("\"right\":" + right)
-                    .toString();
-        }
-    }
-    
 }

@@ -1,7 +1,6 @@
 package com.hnq.study.everyday.earlier;
 
-import org.apache.commons.lang3.builder.ToStringBuilder;
-import org.apache.commons.lang3.builder.ToStringStyle;
+import com.hnq.study.everyday.ListNode;
 
 /**
  * 给你单链表的头节点 head ，请你反转链表，并返回反转后的链表。
@@ -84,31 +83,6 @@ public class ReverseList {
         prev = cur;
         cur = temp;
         return reverse3(prev, cur);
-    }
-
-    /**
-     * Definition for singly-linked list.
-     * public class ListNode {
-     *     int val;
-     *     ListNode next;
-     *     ListNode() {}
-     *     ListNode(int val) { this.val = val; }
-     *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
-     * }
-     */
-    private static class ListNode {
-        int val;
-        ListNode next;
-        ListNode() {}
-        ListNode(int val) { this.val = val; }
-        ListNode(int val, ListNode next) { this.val = val; this.next = next; }
-        @Override
-        public String toString() {
-            return new ToStringBuilder(this, ToStringStyle.JSON_STYLE)
-                    .append("val", val)
-                    .append("next", next)
-                    .toString();
-        }
     }
 
 }

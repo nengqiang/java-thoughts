@@ -1,7 +1,6 @@
 package com.hnq.study.everyday.quarter202301;
 
-import org.apache.commons.lang3.builder.ToStringBuilder;
-import org.apache.commons.lang3.builder.ToStringStyle;
+import com.hnq.study.everyday.ListNode;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -110,26 +109,6 @@ public class IsPalindrome {
             slow = slow.next;
         }
         return true;
-    }
-
-    static class ListNode {
-        int val;
-        ListNode next;
-        ListNode(int x) {
-            val = x;
-            next = null;
-        }
-        ListNode(int x, ListNode node) {
-            val = x;
-            next = node;
-        }
-        @Override
-        public String toString() {
-            return new ToStringBuilder(this, ToStringStyle.JSON_STYLE)
-                    .append("val", val)
-                    .append("next", next)
-                    .toString();
-        }
     }
 
 }
