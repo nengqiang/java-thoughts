@@ -1,4 +1,4 @@
-package com.hnq.study.everyday.month202212;
+package com.hnq.study.everyday.quarter202204;
 
 import java.util.Arrays;
 import java.util.LinkedList;

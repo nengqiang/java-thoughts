@@ -1,4 +1,4 @@
-package com.hnq.study.everyday.month202211;
+package com.hnq.study.everyday.quarter202204;
 
 import com.google.common.collect.Lists;
 
