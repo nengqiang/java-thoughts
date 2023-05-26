@@ -31,9 +31,9 @@ package com.hnq.study.everyday.quarter202302;
 public class IsPowerOfFour {
 
     public static void main(String[] args) {
-        System.out.println(isPowerOfFour(16));
-        System.out.println(isPowerOfFour(5));
-        System.out.println(isPowerOfFour(1));
+        System.out.println(isPowerOfFour3(16));
+        System.out.println(isPowerOfFour3(5));
+        System.out.println(isPowerOfFour3(1));
     }
 
     private static boolean isPowerOfFour(int n) {
@@ -42,6 +42,20 @@ public class IsPowerOfFour {
             n /= 4;
         }
         return n == 1;
+    }
+
+    /**
+     * 二进制表示中 1 的位置
+     */
+    private static boolean isPowerOfFour2(int n) {
+        return n > 0 && (n & (n - 1)) == 0 & (n & 0xaaaaaaaa) == 0;
+    }
+
+    /**
+     * 取模性质
+     */
+    private static boolean isPowerOfFour3(int n) {
+        return (n & (n - 1)) == 0 && n % 3 == 1;
     }
 
 }
