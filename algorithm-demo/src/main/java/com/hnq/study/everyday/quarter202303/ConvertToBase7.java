@@ -19,6 +19,7 @@ package com.hnq.study.everyday.quarter202303;
  *
  * @author henengqiang
  * @date 2023/8/21
+ * @see <a href="https://leetcode.cn/problems/base-7/">链接</a>
  */
 public class ConvertToBase7 {
 

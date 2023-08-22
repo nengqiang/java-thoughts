@@ -32,6 +32,7 @@ import java.util.*;
  *
  * @author henengqiang
  * @date 2023/8/18
+ * @see <a href="https://leetcode.cn/problems/find-mode-in-binary-search-tree/">链接</a>
  */
 public class FindMode {
 
