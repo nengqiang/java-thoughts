@@ -14,6 +14,12 @@ public class ProductExceptSelf {
         System.out.println(Arrays.toString(p.productExceptSelf(new int[]{1, 2, 3, 4})));
         System.out.println(Arrays.toString(p.productExceptSelf(new int[]{-1, 1, 0, -3, 3})));
         System.out.println(Arrays.toString(p.productExceptSelf(new int[]{1, 2, 3, 4, 5})));
+        
+        // 测试优化算法
+        System.out.println("优化算法结果:");
+        System.out.println(Arrays.toString(p.productExceptSelfOptimized(new int[]{1, 2, 3, 4})));
+        System.out.println(Arrays.toString(p.productExceptSelfOptimized(new int[]{-1, 1, 0, -3, 3})));
+        System.out.println(Arrays.toString(p.productExceptSelfOptimized(new int[]{1, 2, 3, 4, 5})));
     }
 
     /*
@@ -53,5 +59,23 @@ public class ProductExceptSelf {
     }
 
     // 动态构建乘积
-
+    public int[] productExceptSelfOptimized(int[] nums) {
+        int n = nums.length;
+        int[] res = new int[n];
+        
+        // 计算左侧乘积
+        res[0] = 1;
+        for (int i = 1; i < n; i++) {
+            res[i] = res[i - 1] * nums[i - 1];
+        }
+        
+        // 计算右侧乘积并更新结果
+        int right = 1;
+        for (int i = n - 1; i >= 0; i--) {
+            res[i] *= right;
+            right *= nums[i];
+        }
+        
+        return res;
+    }
 }
