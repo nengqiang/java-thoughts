@@ -1,4 +1,4 @@
-package com.hnq.basics.thinkinginjava8.controlstream;
+package com.hnq.study.interview;
 
 import java.util.Arrays;
 
