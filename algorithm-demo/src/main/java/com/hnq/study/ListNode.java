@@ -1,4 +1,4 @@
-package com.hnq.study.everyday;
+package com.hnq.study;
 
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;

@@ -1,6 +1,6 @@
 package com.hnq.study.everyday.quarter202401;
 
-import com.hnq.study.everyday.ListNode;
+import com.hnq.study.ListNode;
 
 import java.util.ArrayList;
 import java.util.List;

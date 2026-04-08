@@ -1,6 +1,6 @@
 package com.hnq.study.everyday.earlier;
 
-import com.hnq.study.everyday.ListNode;
+import com.hnq.study.ListNode;
 
 /**
  * 给定一个链表，判断链表中是否有环。

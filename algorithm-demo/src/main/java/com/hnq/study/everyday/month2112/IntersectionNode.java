@@ -1,6 +1,6 @@
 package com.hnq.study.everyday.month2112;
 
-import com.hnq.study.everyday.ListNode;
+import com.hnq.study.ListNode;
 
 import java.util.Collections;
 import java.util.LinkedList;

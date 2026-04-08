@@ -1,6 +1,6 @@
 package com.hnq.study.everyday.earlier;
 
-import com.hnq.study.everyday.ListNode;
+import com.hnq.study.ListNode;
 
 import java.util.LinkedList;
 import java.util.List;
