@@ -1,6 +1,6 @@
 package com.hnq.study.everyday.quarter202302;
 
-import com.hnq.study.everyday.TreeNode;
+import com.hnq.study.TreeNode;
 
 /**
  * 给你二叉树的根节点root 和一个表示目标和的整数targetSum 。判断该树中是否存在 根节点到叶子节点 的路径，

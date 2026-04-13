@@ -1,6 +1,6 @@
 package com.hnq.study.everyday.quarter202301;
 
-import com.hnq.study.everyday.TreeNode;
+import com.hnq.study.TreeNode;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

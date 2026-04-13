@@ -1,6 +1,6 @@
 package com.hnq.study.everyday.quarter202301;
 
-import com.hnq.study.everyday.TreeNode;
+import com.hnq.study.TreeNode;
 
 /**
  * 给定一个二叉树，找出其最大深度。

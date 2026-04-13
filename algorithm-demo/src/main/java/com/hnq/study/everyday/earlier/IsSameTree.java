@@ -1,6 +1,6 @@
 package com.hnq.study.everyday.earlier;
 
-import com.hnq.study.everyday.TreeNode;
+import com.hnq.study.TreeNode;
 
 import java.util.Stack;
 

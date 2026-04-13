@@ -1,6 +1,6 @@
 package com.hnq.study.everyday.quarter202303;
 
-import com.hnq.study.everyday.TreeNode;
+import com.hnq.study.TreeNode;
 
 /**
  * 给你两棵二叉树： root1 和 root2 。

@@ -1,6 +1,6 @@
 package com.hnq.study.everyday.quarter202403;
 
-import com.hnq.study.everyday.TreeNode;
+import com.hnq.study.TreeNode;
 
 /**
  * @author henengqiang

@@ -1,6 +1,6 @@
 package com.hnq.study.everyday.quarter202304;
 
-import com.hnq.study.everyday.TreeNode;
+import com.hnq.study.TreeNode;
 
 /**
  * 二叉树中第二小的节点

@@ -1,6 +1,6 @@
 package com.hnq.study.everyday.quarter202303;
 
-import com.hnq.study.everyday.TreeNode;
+import com.hnq.study.TreeNode;
 
 /**
  * 二叉树的坡度

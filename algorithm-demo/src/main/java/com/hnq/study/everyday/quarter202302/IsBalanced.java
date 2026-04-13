@@ -1,6 +1,6 @@
 package com.hnq.study.everyday.quarter202302;
 
-import com.hnq.study.everyday.TreeNode;
+import com.hnq.study.TreeNode;
 
 /**
  * 给定一个二叉树，判断它是否是高度平衡的二叉树。

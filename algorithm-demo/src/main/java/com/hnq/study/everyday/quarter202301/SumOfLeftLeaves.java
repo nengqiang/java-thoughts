@@ -1,6 +1,6 @@
 package com.hnq.study.everyday.quarter202301;
 
-import com.hnq.study.everyday.TreeNode;
+import com.hnq.study.TreeNode;
 
 /**
  * 给定二叉树的根节点root，返回所有左叶子之和。
